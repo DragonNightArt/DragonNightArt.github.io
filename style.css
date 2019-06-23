@@ -1,0 +1,61 @@
+button {
+	display:inline-block;
+	float:right;
+	}
+legend {
+	bottom-margin:5px;
+	}
+
+input.inTny {
+	width:35px;
+	}
+input.inSml {
+	width:50px;
+	}
+input.inMed {
+	width:100px;
+	}
+input.inBig {
+	width:200px;
+	}
+input.inMove {
+	width:140px;
+	}
+input.line {
+	display:inline-block;
+	}
+
+table, tr, td {
+	padding:3px;
+	}
+
+.hideBlock {
+  display: none;
+  overflow: hidden;
+  }
+
+.txsm {
+	font-size:11pt;
+	font-weight:bold;
+	}
+.fieldnorm {
+	display: inline-block;
+	padding: 3px;
+	border: 1px solid black;
+	}
+.fieldstack {
+	padding: 3px;
+	border: 1px solid black;
+	margin:0px;
+	}
+.fieldstack div {
+	margin-bottom: 5px;
+	}
+.statcol {
+	padding:3px;
+	width:210px;
+	
+.hpcol {
+	padding:3px;
+	width:200px;
+	}
