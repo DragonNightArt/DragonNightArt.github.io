@@ -7,15 +7,25 @@
 	<!--<link rel="stylesheet" href="pokestyle.css">-->
 
 	<!-- Bootstrap-->
+	 <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+	
+	<!-- Old Bootstrap
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">-->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
+	
+	
 	<link rel="stylesheet" href="style.css">
-
+	
 </head>
 
 <!-- TO DO
@@ -23,33 +33,33 @@
 	Sheet Select
 	Item use
 	Gear use
-
+	
 -->
 <body>
-
+	
 	<div class='row'>
-		<!-- Record Log --> <div class='col-sm-3 well'> Chat
-
-
+		<!-- Record Log --> <div class='col-sm-3 card'> Chat
+			
+			
 		</div><!--End Record Log-->
-
+		
 		<div class='col-sm-9'>
-			<!-- Char Select --> <div class='row well'>Header
-
+			<!-- Char Select --> <div class='row card'>Header
+				
 				<!--
 				Which buttons to show
 				list buttons
 				buttons change (Character Sheet)
 				-->
-
+				
 			</div><!--End Sheets List-->
-			<!-- Sheet --> <div class='row well'><form id='sheet'>
-
+			<!-- Sheet --> <div class='row card'><form id='sheet'>
+				
 				<!--
 				Trainer/Pokemon?
 				submit form button
 				panic button?
-
+				
 				<!--<span class="glyphicon glyphicon-collapse-up"></span>
 					glyphicon glyphicon-zoom-in
 					glyphicon glyphicon-zoom-out
@@ -68,7 +78,7 @@
 					glyphicon glyphicon-minus
 					glyphicon glyphicon-plus
 					glyphicon glyphicon-repeat-->
-
+				
 				<!--Header Info--><fieldset>
 					<legend>Basic Info
 								<button data-toggle='collapse' data-target='#askHead' type='button'><span class='glyphicon glyphicon-question-sign'></span></button>
@@ -76,8 +86,8 @@
 							<div id='askHead' class='collapse'>
 								Info
 							</div>
-
-
+							
+				
 					<!--Basic Info--><div>
 					<table><tr>
 						<td><input id='name' name='name' type='text' class='inBig' data-toggle='tooltip' title='Name'></td>
@@ -87,7 +97,7 @@
 					</tr><tr>
 						<td>Name</td><td>Gender</td><td>Size</td><td>Loyalty</td>
 					</tr></table>
-
+					
 					<!--Affinity Info--><table><tr>
 						<td><input id='type1' name='type1' type='text' class='inMed' data-toggle='tooltip' title='Type 1'></td>
 						<td><input id='type2' name='type2' type='text' class='inMed' data-toggle='tooltip' title='Type 2'></td>
@@ -95,9 +105,9 @@
 					</tr><tr>
 						<td>Affinity</td><td> </td><td>Combo</td>
 					</tr></table></div>
-
+					
 					<!--Points Info--><table><tr>
-
+					
 						<!--Health--><td class='hpcol' valign='top'><fieldset class='fieldstack'>
 							<legend class='txsm'>Health</legend>
 							<input id='hpCur' name='hpCur' value='0' max='5' type='number' class='inSml' data-toggle='tooltip' title='Current'>
@@ -121,7 +131,7 @@
 								</div>
 							</div>
 						</fieldset></td>
-
+						
 						<!--Energy--><td class='hpcol' valign='top'><fieldset class='fieldstack'>
 							<legend class='txsm'>Energy</legend>
 							<input id='enCur' name='enCur' value='0' max='5' type='number' class='inSml' data-toggle='tooltip' title='Current'>
@@ -145,7 +155,7 @@
 								</div>
 							</div>
 						</fieldset></td>
-
+						
 						<!--Knowledge--><td class='hpcol' valign='top'><fieldset class='fieldstack'>
 							<legend class='txsm'>Knowledge/Max</legend>
 							<input id='knCur' name='knCur' value='2' max='2' type='number' class='inSml' data-toggle='tooltip' title='Current'>
@@ -169,7 +179,7 @@
 								</div>
 							</div>
 						</fieldset></td>
-
+						
 						<!--Initiative--><td class='hpcol' valign='top'><fieldset class='fieldstack'>
 							<legend class='txsm'>Initiative</legend>
 							<input id='initCur' value='0' type='number' class='inSml' readonly data-toggle='tooltip' title='Current'>
@@ -187,20 +197,20 @@
 								</div>
 							</div>
 						</fieldset></td>
-
+						
 						<!--XP & LV--><td class='hpcol' valign='top'><fieldset class='fieldstack'>
 							<legend class='txsm'>Xp & Lv</legend>
 							<input id='xp' type='number' class='inSml' data-toggle='tooltip' title='XP'>
 							/
 							<input id='lv' type='number' class='inSml' data-toggle='tooltip' title='Level'>
 						</fieldset></td>
-
+				
 					</tr></table><!-- End Points Info -->
 				</fieldset><!--End Header Info-->
-
+				
 				<!--Stats/Skills--><fieldset class='row'>
 					<legend>Stats and Skills</legend>
-
+					
 					<table><tr>
 						<!--Attack--><td class='statcol' valign='top'>
 							<fieldset class='fieldstack'>
@@ -225,8 +235,8 @@
 									</div>
 								</div>
 							</fieldset>
-						</td>
-
+						</td><!-- End Attack -->
+						
 						<!--Defence--><td class='statcol' valign='top'>
 							<fieldset class='fieldstack'>
 								<legend class='txsm'>Defence</legend>
@@ -250,8 +260,8 @@
 									</div>
 								</div>
 							</fieldset>
-						</td>
-
+						</td><!-- End Defence -->
+						
 						<!--Agility--><td class='statcol' valign='top'>
 							<fieldset class='fieldstack'>
 								<legend class='txsm'>Agility</legend>
@@ -275,8 +285,8 @@
 									</div>
 								</div>
 							</fieldset>
-						</td>
-
+						</td><!-- End Agility -->
+						
 						<!--Speed--><td class='statcol' valign='top'>
 							<fieldset class='fieldstack'>
 								<legend class='txsm'>Speed</legend>
@@ -300,42 +310,89 @@
 									</div>
 								</div>
 							</fieldset>
+						</td><!-- End Speed -->
+						
+					</tr><tr>
+						<!-- Physical --><td class='statcol' valign='top'>
+							<fieldset class='fieldstack'>
+								<legend class='txsm'>Physical Skills</legend>
+								<div class='input-group'>
+									<span class="input-group-addon">Points</span>
+									<input id='physPts' name='physPts' type='number' class='form-control' onchange=''>
+									<span class='input-group-addon'><button type='button' data-toggle='tooltip' title='Roll'>&#127922;</button></span>
+								</div>
+								<!-- Athletics -->
+								<!-- Acrobatics -->
+								<!-- Combat -->
+								<!-- Stealth -->
+							</fieldset>
 						</td>
-
+						
+						<!-- Mental --><td class='statcol' valign='top'>
+							<fieldset class='fieldstack'>
+								<legend class='txsm'>Mental Skills</legend>
+							<!-- Medicine -->
+							<!-- Military -->
+							<!-- Perception -->
+							<!-- Survival -->
+							</fieldset>
+						</td>
+						
+						<!-- Social --><td class='statcol' valign='top'>
+							<fieldset class='fieldstack'>
+								<legend class='txsm'>Social Skills</legend>
+							<!-- Command -->
+							<!-- Deception -->
+							<!-- Intuition -->
+							<!-- Persuasion -->
+							</fieldset>
+						</td>
+						
+						<!-- Magic --><td class='statcol' valign='top'>
+							<fieldset class='fieldstack'>
+								<legend class='txsm'>Magic Skills</legend>
+							<!-- Channelling -->
+							<!-- Divining -->
+							<!-- Focus -->
+							<!-- Summoning -->
+							</fieldset
+						</td>
+					
 					</tr></table>
 				</fieldset><!--End Stats-->
-
+				
 				<!--Inventory Col--><div class='col-sm-4'>
 					<fieldset>
 						<legend>Inventory</legend>
-
+						
 						<!--Money--><fieldset class='fieldstack'>
 							<legend class='txsm'>Kinstones</legend>
 							<input id='stones' type='number' class='inMed'>
 						</fieldset>
-
+						
 						<!--Usable--><fieldset class='fieldstack'>
 							<legend class='txsm'>Bag
 								<button data-toggle='collapse' data-target='#askItem' type='button' style='float:right;'>
 									<span class='glyphicon glyphicon-question-sign'></span></button>
-								<button id='itemAdd' class='Item add' type='button' data-toggle='tooltip' title='Add Item'><span class='glyphicon glyphicon-plus'></span></button>
+								<button class='Item add' type='button' data-toggle='tooltip' title='Add Item'>
+									<span class='glyphicon glyphicon-plus'></span></button>
 							</legend>
 							<!-- Usable Help -->
 							<div id='askItem' class='collapse'>
 								This category is for Usable items.<br>
 								"<span class='glyphicon glyphicon-comment'></span>" will remove one of the item and announce that you used it.
 							</div>
-
+							
 							<!-- Repeating Usable -->
 							<div class='repeatingItem'>
 								<input name='itemName_1' id='itemName_1' type='text' class='line inMove' value='' placeholder='Item Name' data-toggle='tooltip' title='Item Name'/>
 								<input name='itemCnt_1' id='itemCnt_1' type='number' class='line inSml' value='' placeholder='0' data-toggle='tooltip' title='Number'/>
-								<button class='itemDel' type='button' data-toggle='tooltip' title='Delete'>
+								<button class='del' type='button' data-toggle='tooltip' title='Delete'>
 									<span class='glyphicon glyphicon-trash'></span></button>
 								<button class='itemUse' type='button' data-toggle='tooltip' title='Use'>&#127922;</button>
 							</div>
 						</fieldset> <!-- End Usable -->
-
+						
 						<!--Gear--><fieldset class='fieldstack'>
 							<legend class='txsm'>Gear
 								<button data-toggle='collapse' data-target='#askGear' type='button'>
@@ -347,7 +404,7 @@
 								This category is for equipment or reusable items.<br>
 								"<span class='glyphicon glyphicon-comment'></span>" will announce that you used the item and list its effects.
 							</div>
-
+							
 							<!-- Repeating Gear -->
 							<div class='repeatingGear'>
 								<input name='gearName_1' id='gearName_1' type='text' class='line inMove' placeholder='Item Name' data-toggle='tooltip' title='Item Name'>
@@ -361,14 +418,14 @@
 								</div>
 							</div>
 						</fieldset> <!-- End Gear -->
-
+						
 					</fieldset>
 				</div><!--End Inventory Col-->
-
+				
 				<!--Status Col--><div class='col-sm-4'>
 					<fieldset>
 						<legend>Status</legend>
-
+						
 						<!--Status--><fieldset class='fieldstack'>
 							<legend class='txsm'>Conditions
 								<button data-toggle='collapse' data-target='#askCon' type='button'>
@@ -376,11 +433,11 @@
 								<button class='conAdd' type='button' data-toggle='tooltip' title='Add Condition'>
 									<span class='glyphicon glyphicon-plus'></span></button>
 							</legend>
-
+							
 							<div id='askCon' class='collapse'>
 								condition, duration, roll-save/effect, add/delete
 							</div>
-
+							
 							<!-- Repeating Condition -->
 							<div class='repeatingCondition'>
 								<select id='conName_1' name='conName_1' data-toggle='tooltip' title='Condition'>
@@ -403,7 +460,7 @@
 								</div>
 							</div>
 						</fieldset> <!-- End Condition -->
-
+						
 						<!--Buffs--><fieldset class='fieldstack'>
 							<legend class='txsm'>Stat Change
 								<button data-toggle='collapse' data-target='#askBuff' type='button'>
@@ -415,7 +472,7 @@
 							<div id='askBuff' class='collapse'>
 								stat, value, duration, roll, delete
 							</div>
-
+							
 							<!-- Repeating Buff -->
 							<div class='repeatingBuff'>
 								<input id='buffName_1' name='buffName_1' type='text' class='line inMove' placeholder='Source' data-toggle='tooltip' title='Effect Source'>
@@ -439,13 +496,13 @@
 								</div>
 							</div>
 						</fieldset> <!-- End Buffs -->
-
+						
 						<!--Pain Penalty--><fieldset class='fieldstack'>
 							<legend class='txsm'>Pain Penalty
 								<span style='float:right;'>NA</span>
 							</legend>
 						</fieldset>
-
+						
 						<!--Abilities--><fieldset class='fieldstack'>
 							<legend class='txsm'>Abilities
 								<button id='ablAdd' type='button'><span class='glyphicon glyphicon-plus'></span></button>
@@ -454,19 +511,19 @@
 							<div id='askAbl' class='collapse'>
 								Ability, Effect/Roll, add/delete
 							</div>
-
+							
 							<div id='ablBlock'>
 								Abilities
 							</div>
 						</fieldset>
-
+						
 					</fieldset>
 				</div><!--End Status Col-->
-
+				
 				<!--Features Col--><div class='col-sm-4'>
 					<fieldset>
 						<legend>Features</legend>
-
+						
 						<!--Moves--><fieldset class='fieldstack'>
 							<legend class='txsm'>Moves
 								<button data-toggle='collapse' data-target='#askMove' type='button' style='float:right;'><span class='glyphicon glyphicon-question-sign'></span></button>
@@ -489,7 +546,7 @@
 									</div>
 								</div>
 							</fieldset>
-
+							
 							<!--
 							show/hide name roll
 							type stab class
@@ -499,7 +556,7 @@
 							other
 							-->
 						</fieldset>
-
+						
 						<!--Features--><fieldset class='fieldstack'>
 							<legend class='txsm'>Features
 								<button data-toggle='collapse' data-target='#askFeat' type='button' style='float:right;'><span class='glyphicon glyphicon-question-sign'></span></button>
@@ -507,7 +564,7 @@
 							<div id='askFeat' class='collapse'>
 								Info
 							</div>
-
+							
 							<fieldset class='fieldstack'>
 								<input id='featName' type='text'>
 							</fieldset>
@@ -522,7 +579,7 @@
 						</fieldset>
 					</fieldset>
 				</div><!--End Features Col-->
-
+				
 			</form></div><!--End Character Sheet-->
 		</div>
 	</div>
@@ -541,13 +598,13 @@
 	-->
 	<script src="repeat.js"></script>
 	<script src='autostat.js'></script>
-
+	
 	<script>
 		$(document).ready(function(){
 			$('[data-toggle="tooltip"]').tooltip();
 		});
 	</script>
-
+	
 </body>
 
 </html>
