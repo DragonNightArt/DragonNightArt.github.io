@@ -1,5 +1,5 @@
 var attrs = ['for', 'id', 'name'];
-function resetAttributeNames(section) { 
+function resetAttributeNames(section) {
     var tags = section.find('input, div, select'), idx = section.index();
     tags.each(function() {
       var $this = $(this);
@@ -14,14 +14,26 @@ function resetAttributeNames(section) {
 
 //		ITEMS
 //Add
-$('.itemAdd').click(function(e){
-        e.preventDefault();
-        var lastRepeatingGroup = $('.repeatingItems').last();
-        var cloned = lastRepeatingGroup.clone(true)  
-        cloned.insertAfter(lastRepeatingGroup);
-        resetAttributeNames(cloned)
-    });
-                    
+// $('.itemAdd').click(function(e){
+//         e.preventDefault();
+//         var lastRepeatingGroup = $('.repeatingItems').last();
+//         var cloned = lastRepeatingGroup.clone(true)
+//         cloned.insertAfter(lastRepeatingGroup);
+//         resetAttributeNames(cloned)
+//     });
+
+$('.add').click(function(e) {
+  e.preventDefault();
+
+  var classes = e.currentTarget.classList;
+  var target = ".repeating" + classes[0];
+
+  var lastRepeatingGroup = $(target).last();
+  var cloned = lastRepeatingGroup.clone(true)
+  cloned.insertAfter(lastRepeatingGroup);
+  resetAttributeNames(cloned)
+});
+
 // Delete
 $('.itemDel').click(function(e){
         e.preventDefault();
@@ -33,11 +45,11 @@ $('.itemDel').click(function(e){
         }
         current_item.slideUp('slow', function() {
             current_item.remove();
-            
+
             // reset indexes
             other_items.each(function() {
-               resetAttributeNames($(this)); 
-            })  
+               resetAttributeNames($(this));
+            })
         })
     });
 
@@ -46,11 +58,11 @@ $('.itemDel').click(function(e){
 $('.gearAdd').click(function(e){
         e.preventDefault();
         var lastRepeatingGroup = $('.repeatingGear').last();
-        var cloned = lastRepeatingGroup.clone(true)  
+        var cloned = lastRepeatingGroup.clone(true)
         cloned.insertAfter(lastRepeatingGroup);
         resetAttributeNames(cloned)
     });
-                    
+
 // Delete
 $('.gearDel').click(function(e){
         e.preventDefault();
@@ -62,11 +74,11 @@ $('.gearDel').click(function(e){
         }
         current_gear.slideUp('slow', function() {
             current_gear.remove();
-            
+
             // reset indexes
             other_gear.each(function() {
-               resetAttributeNames($(this)); 
-            })  
+               resetAttributeNames($(this));
+            })
         })
     });
 
@@ -85,11 +97,11 @@ $('.gearHide').click(function(e) {
 $('.conAdd').click(function(e){
         e.preventDefault();
         var lastRepeatingGroup = $('.repeatingCondition').last();
-        var cloned = lastRepeatingGroup.clone(true)  
+        var cloned = lastRepeatingGroup.clone(true)
         cloned.insertAfter(lastRepeatingGroup);
         resetAttributeNames(cloned)
     });
-                    
+
 // Delete
 $('.conDel').click(function(e){
         e.preventDefault();
@@ -101,11 +113,11 @@ $('.conDel').click(function(e){
         }
         current_con.slideUp('slow', function() {
             current_con.remove();
-            
+
             // reset indexes
             other_con.each(function() {
-               resetAttributeNames($(this)); 
-            })  
+               resetAttributeNames($(this));
+            })
         })
     });
 
@@ -125,11 +137,11 @@ $('.conHide').click(function(e) {
 $('.buffAdd').click(function(e){
         e.preventDefault();
         var lastRepeatingGroup = $('.repeatingBuff').last();
-        var cloned = lastRepeatingGroup.clone(true)  
+        var cloned = lastRepeatingGroup.clone(true)
         cloned.insertAfter(lastRepeatingGroup);
         resetAttributeNames(cloned)
     });
-                    
+
 // Delete
 $('.buffDel').click(function(e){
         e.preventDefault();
@@ -141,11 +153,11 @@ $('.buffDel').click(function(e){
         }
         current_buff.slideUp('slow', function() {
             current_buff.remove();
-            
+
             // reset indexes
             other_buff.each(function() {
-               resetAttributeNames($(this)); 
-            })  
+               resetAttributeNames($(this));
+            })
         })
     });
 
