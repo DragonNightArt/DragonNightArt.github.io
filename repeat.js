@@ -1,5 +1,5 @@
 var attrs = ['for', 'id', 'name'];
-function resetAttributeNames(section) { 
+function resetAttributeNames(section) {
     var tags = section.find('input, div, select'), idx = section.index();
     tags.each(function() {
       var $this = $(this);
@@ -11,7 +11,7 @@ function resetAttributeNames(section) {
       })
     })
 }
-	
+
 $('.add').click(function(e) {
   e.preventDefault();
 
@@ -24,7 +24,7 @@ $('.add').click(function(e) {
   resetAttributeNames(cloned)
 });
 
-                    
+
 /*/ Delete
 $('.del').click(function(e){
 		alert('delete');
@@ -37,7 +37,7 @@ $('.del').click(function(e){
         }
         current_set.slideUp('slow', function() {
             current_set.remove();
-            
+
             // reset indexes
             other_set.each(function() {
                resetAttributeNames($(this)); 
@@ -78,11 +78,11 @@ $('.itemDel').click(function(e){
         }
         current_item.slideUp('slow', function() {
             current_item.remove();
-            
+
             // reset indexes
             other_items.each(function() {
-               resetAttributeNames($(this)); 
-            })  
+               resetAttributeNames($(this));
+            })
         })
     });
 
@@ -134,7 +134,7 @@ $('.conAdd').click(function(e){
         cloned.insertAfter(lastRepeatingGroup);
         resetAttributeNames(cloned)
     });
-                    
+
 // Delete
 $('.conDel').click(function(e){
         e.preventDefault();
