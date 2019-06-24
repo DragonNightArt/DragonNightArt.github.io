@@ -25,7 +25,7 @@ $('.add').click(function(e) {
 });
 
 
-/*/ Delete
+// Delete
 $('.del').click(function(e){
 		alert('delete');
         e.preventDefault();
@@ -56,7 +56,6 @@ $('.hide').click(function(e) {
 			content.style.display = "block";
 		}
 	});
-/*
 //		ITEMS
 //Add
 $('.itemAdd').click(function(e){
