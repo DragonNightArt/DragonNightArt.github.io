@@ -36,164 +36,119 @@
 			+document.forms['sheet']['initPts'].value + +document.forms['sheet']['initMod'].value;
 		} 
 
-//Strength
+//Attack
 	function update_atk() {
 		document.forms['sheet']['atk'].value = 
 			+document.forms['sheet']['atkPts'].value + +document.forms['sheet']['atkMod'].value;
-		if (document.getElementById('atkVit').checked == true) {
-			+document.forms['sheet']['atk'].value ++};
 		document.getElementById('atkPts').max =
 			+document.forms['sheet']['atkPtsMax'].value;
-		}
-	function update_SKLcomb() {
-		document.forms['sheet']['SKLcomb'].value = 
-			+document.forms['sheet']['SKLcombPts'].value + +document.forms['sheet']['SKLcombMod'].value;
-		document.getElementById('SKLcombPts').max =
-			+document.forms['sheet']['SKLcombPtsMax'].value;
-		}
-	function update_SKLinti() {
-		document.forms['sheet']['SKLinti'].value = 
-			+document.forms['sheet']['SKLintiPts'].value + +document.forms['sheet']['SKLintiMod'].value;
-		document.getElementById('SKLintiPts').max =
-			+document.forms['sheet']['SKLintiPtsMax'].value;
-		}
-
-//Vitality
+	}
+//Defence
 	function update_def() {
 		document.forms['sheet']['def'].value = 
 			+document.forms['sheet']['defPts'].value + +document.forms['sheet']['defMod'].value;
-		if (document.getElementById('defVit').checked == true) {
-			+document.forms['sheet']['def'].value ++};
-		document.getElementById('atkPts').max =
+		document.getElementById('defPts').max =
 			+document.forms['sheet']['defPtsMax'].value;
-		}
-	function update_SKLathl() {
-		document.forms['sheet']['SKLathl'].value = 
-			+document.forms['sheet']['SKLathlPts'].value + +document.forms['sheet']['SKLathlMod'].value;
-		document.getElementById('SKLathlPts').max =
-			+document.forms['sheet']['SKLathlPtsMax'].value;
-		}
-	function update_SKLsurv() {
-		document.forms['sheet']['SKLsurv'].value = 
-			+document.forms['sheet']['SKLsurvPts'].value + +document.forms['sheet']['SKLsurvMod'].value;
-		document.getElementById('SKLsurvPts').max =
-			+document.forms['sheet']['SKLsurvPtsMax'].value;
-		}
-	
-//Spirit
-	function update_satk() {
-		document.forms['sheet']['satk'].value = 
-			+document.forms['sheet']['satkPts'].value + +document.forms['sheet']['atkMod'].value;
-		if (document.getElementById('satkVit').checked == true) {
-			+document.forms['sheet']['satk'].value ++};
-		document.getElementById('satkPts').max =
-			+document.forms['sheet']['satkPtsMax'].value;
-		}
-	function update_SKLcha() {
-		document.forms['sheet']['SKLcha'].value = 
-			+document.forms['sheet']['SKLchaPts'].value + +document.forms['sheet']['SKLchaMod'].value;
-		document.getElementById('SKLchaPts').max =
-			+document.forms['sheet']['SKLchaPtsMax'].value;
-		}
-	function update_SKLcomm() {
-		document.forms['sheet']['SKLcomm'].value = 
-			+document.forms['sheet']['SKLcommPts'].value + +document.forms['sheet']['SKLcommMod'].value;
-		document.getElementById('SKLcommPts').max =
-			+document.forms['sheet']['SKLcommPtsMax'].value;
-		}
-	function update_SKLfoc() {
-		document.forms['sheet']['SKLfoc'].value = 
-			+document.forms['sheet']['SKLfocPts'].value + +document.forms['sheet']['SKLfocMod'].value;
-		document.getElementById('SKLfocPts').max =
-			+document.forms['sheet']['SKLfocPtsMax'].value;
-		}
-	function update_SKLgui() {
-		document.forms['sheet']['SKLgui'].value = 
-			+document.forms['sheet']['SKLguiPts'].value + +document.forms['sheet']['SKLguiMod'].value;
-		document.getElementById('SKLguiPts').max =
-			+document.forms['sheet']['SKLguiPtsMax'].value;
-		}
-	function update_SKLintu() {
-		document.forms['sheet']['SKLintu'].value = 
-			+document.forms['sheet']['SKLintuPts'].value + +document.forms['sheet']['SKLintuMod'].value;
-		document.getElementById('SKLintuPts').max =
-			+document.forms['sheet']['SKLintuPtsMax'].value;
-		}
-	
-//Intelligence
-	function update_sdef() {
-		document.forms['sheet']['sdef'].value = 
-			+document.forms['sheet']['sdefPts'].value + +document.forms['sheet']['sdefMod'].value;
-		if (document.getElementById('sdefVit').checked == true) {
-			+document.forms['sheet']['sdef'].value ++};
-		document.getElementById('sdefPts').max =
-			+document.forms['sheet']['sdefPtsMax'].value;
-		}
-	function update_SKLgen() {
-		document.forms['sheet']['SKLgen'].value = 
-			+document.forms['sheet']['SKLgenPts'].value + +document.forms['sheet']['SKLgenMod'].value;
-		document.getElementById('SKLgenPts').max =
-			+document.forms['sheet']['SKLgenPtsMax'].value;
-		}
-	function update_SKLmed() {
-		document.forms['sheet']['SKLmed'].value = 
-			+document.forms['sheet']['SKLmedPts'].value + +document.forms['sheet']['SKLmedMod'].value;
-		document.getElementById('SKLmedPts').max =
-			+document.forms['sheet']['SKLmedPtsMax'].value;
-		}
-	function update_SKLocc() {
-		document.forms['sheet']['SKLocc'].value = 
-			+document.forms['sheet']['SKLoccPts'].value + +document.forms['sheet']['SKLoccMod'].value;
-		document.getElementById('SKLoccPts').max =
-			+document.forms['sheet']['SKLoccPtsMax'].value;
-		}
-	function update_SKLtech() {
-		document.forms['sheet']['SKLtech'].value = 
-			+document.forms['sheet']['SKLtechPts'].value + +document.forms['sheet']['SKLtechMod'].value;
-		document.getElementById('SKLtechPts').max =
-			+document.forms['sheet']['SKLtechPtsMax'].value;
-		}
-	function update_SKLpoke() {
-		document.forms['sheet']['SKLpoke'].value = 
-			+document.forms['sheet']['SKLpokePts'].value + +document.forms['sheet']['SKLpokeMod'].value;
-		document.getElementById('SKLcpokePts').max =
-			+document.forms['sheet']['SKLpokePtsMax'].value;
-		}
-	function update_SKLper() {
-		document.forms['sheet']['SKLper'].value = 
-			+document.forms['sheet']['SKLperPts'].value + +document.forms['sheet']['SKLperMod'].value;
-		document.getElementById('SKLperPts').max =
-			+document.forms['sheet']['SKLperPtsMax'].value;
-		update_init();
-		}
-	function roll_SKLper() {
-		}
-	
-//Dexterity
+	}
+//Agility
+	function update_agi() {
+		document.forms['sheet']['agi'].value = 
+			+document.forms['sheet']['agiPts'].value + +document.forms['sheet']['agiMod'].value;
+		document.getElementById('agiPts').max =
+			+document.forms['sheet']['agiPtsMax'].value;
+	}
+//Speed
 	function update_spd() {
 		document.forms['sheet']['spd'].value = 
 			+document.forms['sheet']['spdPts'].value + +document.forms['sheet']['spdMod'].value;
-		if (document.getElementById('spdVit').checked == true) {
-			+document.forms['sheet']['spd'].value ++};
 		document.getElementById('spdPts').max =
 			+document.forms['sheet']['spdPtsMax'].value;
-		update_init();
-		}
-	function update_SKLacro() {
-		document.forms['sheet']['SKLacro'].value = 
-			+document.forms['sheet']['SKLacroPts'].value + +document.forms['sheet']['SKLacroMod'].value;
-		document.getElementById('SKLacroPts').max =
-			+document.forms['sheet']['SKLacroPtsMax'].value;
-		}
-	function update_SKLeva() {
-		document.forms['sheet']['SKLeva'].value = 
-			+document.forms['sheet']['SKLevaPts'].value + +document.forms['sheet']['SKLevaMod'].value;
-		document.getElementById('SKLevaPts').max =
-			+document.forms['sheet']['SKLevaPtsMax'].value;
-		}
-	function update_SKLstl() {
-		document.forms['sheet']['SKLstl'].value = 
-			+document.forms['sheet']['SKLstlPts'].value + +document.forms['sheet']['SKLstlMod'].value;
-		document.getElementById('SKLstlPts').max =
-			+document.forms['sheet']['SKLstlPtsMax'].value;
-		}
+	}
+
+//Physical
+//Acrobatics
+	function update_acro() {
+		document.forms['sheet']['acroSkl'].value = 
+			+document.forms['sheet']['acroPts'].value + +document.forms['sheet']['acroMod'].value;
+	}
+//Athletics
+	function update_athl() {
+		document.forms['sheet']['athlSkl'].value = 
+			+document.forms['sheet']['athlPts'].value + +document.forms['sheet']['athlMod'].value;
+	}
+//Combat
+	function update_comb() {
+		document.forms['sheet']['combSkl'].value = 
+			+document.forms['sheet']['combPts'].value + +document.forms['sheet']['combMod'].value;
+	}
+//Stealth
+	function update_stea() {
+		document.forms['sheet']['steaSkl'].value = 
+			+document.forms['sheet']['steaPts'].value + +document.forms['sheet']['steaMod'].value;
+	}
+
+//Mental
+//Investigation
+	function update_inve() {
+		document.forms['sheet']['inveSkl'].value = 
+			+document.forms['sheet']['invePts'].value + +document.forms['sheet']['inveMod'].value;
+	}
+//Medicine
+	function update_medi() {
+		document.forms['sheet']['mediSkl'].value = 
+			+document.forms['sheet']['mediPts'].value + +document.forms['sheet']['mediMod'].value;
+	}
+//Perception
+	function update_perc() {
+		document.forms['sheet']['percSkl'].value = 
+			+document.forms['sheet']['percPts'].value + +document.forms['sheet']['percMod'].value;
+	}
+//Survival
+	function update_surv() {
+		document.forms['sheet']['survSkl'].value = 
+			+document.forms['sheet']['survPts'].value + +document.forms['sheet']['survMod'].value;
+	}
+
+//Social
+//Command
+	function update_comm() {
+		document.forms['sheet']['commSkl'].value = 
+			+document.forms['sheet']['commPts'].value + +document.forms['sheet']['commMod'].value;
+	}
+//Deception
+	function update_dece() {
+		document.forms['sheet']['deceSkl'].value = 
+			+document.forms['sheet']['decePts'].value + +document.forms['sheet']['deceMod'].value;
+	}
+//Intuition
+	function update_intu() {
+		document.forms['sheet']['intuSkl'].value = 
+			+document.forms['sheet']['intuPts'].value + +document.forms['sheet']['intuMod'].value;
+	}
+//Persuasion
+	function update_pers() {
+		document.forms['sheet']['persSkl'].value = 
+			+document.forms['sheet']['persPts'].value + +document.forms['sheet']['persMod'].value;
+	}
+
+//Magic
+//Channelling
+	function update_chan() {
+		document.forms['sheet']['chanSkl'].value = 
+			+document.forms['sheet']['chanPts'].value + +document.forms['sheet']['chanMod'].value;
+	}
+//Divining
+	function update_divi() {
+		document.forms['sheet']['diviSkl'].value = 
+			+document.forms['sheet']['diviPts'].value + +document.forms['sheet']['diviMod'].value;
+	}
+//Focus
+	function update_focu() {
+		document.forms['sheet']['focuSkl'].value = 
+			+document.forms['sheet']['focuPts'].value + +document.forms['sheet']['focuMod'].value;
+	}
+//Summoning
+	function update_summ() {
+		document.forms['sheet']['summSkl'].value = 
+			+document.forms['sheet']['summPts'].value + +document.forms['sheet']['summMod'].value;
+	}
