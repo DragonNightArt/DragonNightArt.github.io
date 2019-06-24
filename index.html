@@ -813,9 +813,9 @@
 							<div class='repeatingItem'>
 								<input name='itemName_1' id='itemName_1' type='text' class='line inMove' value='' placeholder='Item Name' data-toggle='tooltip' title='Item Name'/>
 								<input name='itemCnt_1' id='itemCnt_1' type='number' class='line inSml' value='' placeholder='0' data-toggle='tooltip' title='Number'/>
-								<button class='del' type='button' data-toggle='tooltip' title='Delete'>
+								<button class='Item del' type='button' data-toggle='tooltip' title='Delete'>
 									<img src="https://img.icons8.com/material/24/000000/trash.png"></button>
-								<button class='itemUse' type='button' data-toggle='tooltip' title='Use'>&#127922;</button>
+								<button class='Item use' type='button' data-toggle='tooltip' title='Use'>&#127922;</button>
 							</div>
 						</fieldset> <!-- End Usable -->
 
@@ -823,7 +823,7 @@
 							<legend class='txsm'>Gear
 								<button data-toggle='collapse' data-target='#askGear' type='button'>
 									<img src="https://img.icons8.com/material-outlined/24/000000/ask-question.png"></button>
-								<button class='gearAdd' type='button' data-toggle='tooltip' title='Add Gear'><img src="https://img.icons8.com/android/24/000000/plus.png"></button>
+								<button class='Gear add' type='button' data-toggle='tooltip' title='Add Gear'><img src="https://img.icons8.com/android/24/000000/plus.png"></button>
 							</legend>
 							<!-- Gear Help -->
 							<div id='askGear' class='collapse'>
@@ -834,10 +834,10 @@
 							<!-- Repeating Gear -->
 							<div class='repeatingGear'>
 								<input name='gearName_1' id='gearName_1' type='text' class='line inMove' placeholder='Item Name' data-toggle='tooltip' title='Item Name'>
-								<button class='gearDel' type='button' data-toggle='tooltip' title='Delete'>
+								<button class='Gear del' type='button' data-toggle='tooltip' title='Delete'>
 									<img src="https://img.icons8.com/material/24/000000/trash.png"></button>
-								<button class='gearUse' type='button' data-toggle='tooltip' title='Use'>&#127922;</button>
-								<button class='gearHide' type='button'><img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
+								<button class='Gear use' type='button' data-toggle='tooltip' title='Use'>&#127922;</button>
+								<button class='Gear hide' type='button'><img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								<!-- Gear Hide -->
 								<div id='gearEx_1' name='gearEX_1' class='hideBlock'>
 									<textarea name='gearDesc_1' id='gearDesc_1' rows='3' cols='40' placeholder='Effect'></textarea>
@@ -856,7 +856,7 @@
 							<legend class='txsm'>Conditions
 								<button data-toggle='collapse' data-target='#askCon' type='button'>
 									<img src="https://img.icons8.com/material-outlined/24/000000/ask-question.png"></button>
-								<button class='conAdd' type='button' data-toggle='tooltip' title='Add Condition'>
+								<button class='Condition add' type='button' data-toggle='tooltip' title='Add Condition'>
 									<img src="https://img.icons8.com/android/24/000000/plus.png"></button>
 							</legend>
 
@@ -876,10 +876,10 @@
 									<option value='fnch'>Flinched</option>
 								</select>
 								<input id='conDur_1' name='conDur_1' type='number' class='line inSml' placeholder='1' data-toggle='tooltip' title='Duration'>
-								<button class='conDel' type='button' data-toggle='tooltip' title='Delete'>
+								<button class='Condition del' type='button' data-toggle='tooltip' title='Delete'>
 									<img src="https://img.icons8.com/material/24/000000/trash.png"></button>
 								<button class='conRoll' type='button' data-toggle='tooltip' title='Roll'>&#127922;</button>
-								<button class='conHide' type='button'><img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
+								<button class='Condition hide' type='button'><img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								<!-- Condition Hide -->
 								<div id='conEx_1' name='conEX_1' class='hideBlock'>
 									<textarea name='conDesc_1' id='conDesc_1' rows='3' cols='40' placeholder='Effect'></textarea>
@@ -891,7 +891,7 @@
 							<legend class='txsm'>Stat Change
 								<button data-toggle='collapse' data-target='#askBuff' type='button'>
 									<img src="https://img.icons8.com/material-outlined/24/000000/ask-question.png"></button>
-								<button class='buffAdd' type='button' data-toggle='tooltip' title='Add Stat Change'>
+								<button class='Buff add' type='button' data-toggle='tooltip' title='Add Stat Change'>
 									<img src="https://img.icons8.com/android/24/000000/plus.png"></button>
 							</legend>
 							<!-- Buff Question -->
@@ -902,10 +902,10 @@
 							<!-- Repeating Buff -->
 							<div class='repeatingBuff'>
 								<input id='buffName_1' name='buffName_1' type='text' class='line inMove' placeholder='Source' data-toggle='tooltip' title='Effect Source'>
-								<button class='buffDel' type='button' data-toggle='tooltip' title='Delete'>
+								<button class='Buff del' type='button' data-toggle='tooltip' title='Delete'>
 									<img src="https://img.icons8.com/material/24/000000/trash.png"></button>
 								<button class='buffRoll' type='button' data-toggle='tooltip' title='Roll'>&#127922;</button>
-								<button class='buffHide' type='button'><img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
+								<button class='Buff hide' type='button'><img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								<!-- Buff Hide -->
 								<div id='buffEx_1' name='buffEX_1' class='hideBlock'>
 									<select id='buffStat_1' name='buffStat_1' data-toggle='tooltip' title='Stat'>
