@@ -1,3 +1,24 @@
+//Affinity
+	function update_type() {
+		/*
+		code should look something like:
+		if (type1 or type2 === 'neutral') {
+			typeC = '';}
+		if (type1 or type2 === 'fire') {
+			if (type1 or type2 === 'water') {
+				typeC = 'Abyss'};
+			etc...
+		};
+		
+		All combos are:
+			Fire+Decay=Frost   Fire+Spirit=Celestial   Fire+Air=Lightning   Fire+Earth=Magma   Fire+Water=Abyss
+			Water+Decay=Venom   Water+Spirit=Illusion   Water+Air=Weather   Water+Earth=Forest
+			Earth+Decay=Saboteur   Earth+Spirit=Metal   Earth+Air=Sand
+			Air+Decay=Gravity   Air+Spirit=Time
+			Spirit+Decay=Mind
+		*/
+	}
+
 //Health
 	function update_hpCalc() {
 		document.forms['sheet']['hpCurMax'].value = 

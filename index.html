@@ -34,6 +34,7 @@
 	Character History/Bio field
 	Skill Calc
 	every roll button
+	generic skill stat display
 
 	<img src="https://img.icons8.com/material-sharp/24/000000/gear.png">
 	<img src="https://img.icons8.com/android/24/000000/plus.png">
@@ -65,25 +66,6 @@
 				submit form button
 				panic button?
 
-				<!--<span class="glyphicon glyphicon-collapse-up"></span>
-					glyphicon glyphicon-zoom-in
-					glyphicon glyphicon-zoom-out
-					glyphicon glyphicon-edit
-					glyphicon glyphicon-share
-					glyphicon glyphicon-check
-					glyphicon glyphicon-trash
-					glyphicon glyphicon-exclamation-sign
-					glyphicon glyphicon-chevron-up
-					glyphicon glyphicon-chevron-down
-					glyphicon glyphicon-certificate
-					glyphicon glyphicon-ruble
-					glyphicon glyphicon-share-alt
-					glyphicon glyphicon-screenshot
-					glyphicon glyphicon-info-sign
-					glyphicon glyphicon-minus
-					glyphicon glyphicon-plus
-					glyphicon glyphicon-repeat-->
-
 				<!--Header Info--><fieldset>
 					<legend>Basic Info
 								<button data-toggle='collapse' data-target='#askHead' type='button'><span class='glyphicon glyphicon-question-sign'></span></button>
@@ -95,20 +77,36 @@
 
 					<!--Basic Info--><div>
 					<table><tr>
+						<td>Name</td><td>Gender</td><td>Size</td><td>Loyalty</td>
+					</tr><tr>
 						<td><input id='name' name='name' type='text' class='inBig' data-toggle='tooltip' title='Name'></td>
 						<td><input id='gend' name='gend' type='text' class='inMed' data-toggle='tooltip' title='Gender'></td>
 						<td><input id='size' name='size' type='text' class='inSml' data-toggle='tooltip' title='Size'></td>
 						<td><input id='loy' name='loy' type='number' class='inSml' data-toggle='tooltip' title='Loyalty'></td>
-					</tr><tr>
-						<td>Name</td><td>Gender</td><td>Size</td><td>Loyalty</td>
 					</tr></table>
 
 					<!--Affinity Info--><table><tr>
-						<td><input id='type1' name='type1' type='text' class='inMed' data-toggle='tooltip' title='Type 1'></td>
-						<td><input id='type2' name='type2' type='text' class='inMed' data-toggle='tooltip' title='Type 2'></td>
-						<td><input id='typeC' name='typeC' type='text' class='inMed' data-toggle='tooltip' title='Combo Type'></td>
-					</tr><tr>
 						<td>Affinity</td><td> </td><td>Combo</td>
+					</tr><tr>
+						<td><select id='type1' name='type1' onchange='update_type()' data-toggle='tooltip' title='Type 1'>
+							<option value='neutral'>Neutral</option>
+							<option value='fire'>Fire</option>
+							<option value='water'>Water</option>
+							<option value='earth'>Earth</option>
+							<option value='air'>Air</option>
+							<option value='spirit'>Spirit</option>
+							<option value='decay'>Decay</option>
+						</select></td>
+						<td><select id='type2' name='type2' onchange='update_type()' data-toggle='tooltip' title='Type 2'>
+							<option value='neutral'>Neutral</option>
+							<option value='fire'>Fire</option>
+							<option value='water'>Water</option>
+							<option value='earth'>Earth</option>
+							<option value='air'>Air</option>
+							<option value='spirit'>Spirit</option>
+							<option value='decay'>Decay</option>
+						</select></td>
+						<td><input id='typeC' name='typeC' type='text' class='inMed' value='' readonly data-toggle='tooltip' title='Combo Type'></td>
 					</tr></table></div>
 
 					<!--Points Info--><table><tr>
