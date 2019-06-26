@@ -1,3 +1,32 @@
+var minValues = [
+	{ name: "some item", min: -2 },
+  { name: "some other item", min: -3 }
+]
+
+function clamp(num, min, max) {
+  return num < min ? min : num > max ? max : num;
+}
+
+
+$(function() {
+  $(':input[type="number"]').bind('keyup, input',function() {
+    var name = this.name;
+    var value = Number(this.value);
+    
+    var min = 0;
+    var max = Number(this.value);
+
+    for (var i = 0; i < minValues.length; i++) {
+      if (minValues[i].name == name) {
+        min = minValues[i].min;
+      }
+    }
+
+    this.value = clamp(value, min, max);
+  })
+});
+
+
 //Affinity
 	function update_type() {
 		/*
