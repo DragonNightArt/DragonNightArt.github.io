@@ -4,7 +4,6 @@
 
 <head>
 	<title>Poke RPG Char Sheets</title>
-	<!--<link rel="stylesheet" href="pokestyle.css">-->
 
 	<!-- Bootstrap-->
 	 <!-- Latest compiled and minified CSS -->
@@ -64,31 +63,36 @@
 				<!--
 				Trainer/Pokemon?
 				submit form button
-				panic button?
+				panic button?-->
 
 				<!--Header Info--><fieldset>
 					<legend>Basic Info
-								<button data-toggle='collapse' data-target='#askHead' type='button'><span class='glyphicon glyphicon-question-sign'></span></button>
-							</legend>
-							<div id='askHead' class='collapse'>
-								Info
-							</div>
+						<button type='button' data-toggle='collapse' data-target='#askHead'>
+							<img src="https://img.icons8.com/material-outlined/24/000000/ask-question.png"></button>
+					</legend>
+					<div id='askHead' class='collapse'>
+						Info
+					</div>
 
 
 					<!--Basic Info--><div>
 					<table><tr>
 						<td>Name</td><td>Gender</td><td>Size</td><td>Loyalty</td>
 					</tr><tr>
-						<td><input id='name' name='name' type='text' class='inBig' data-toggle='tooltip' title='Name'></td>
-						<td><input id='gend' name='gend' type='text' class='inMed' data-toggle='tooltip' title='Gender'></td>
-						<td><input id='size' name='size' type='text' class='inSml' data-toggle='tooltip' title='Size'></td>
-						<td><input id='loy' name='loy' type='number' class='inSml' data-toggle='tooltip' title='Loyalty'></td>
+						<td><input id='name' name='name' title='Name' class='inBig'
+							type='text' data-toggle='tooltip' placeholder='Name'></td>
+						<td><input id='gend' name='gend' title='Gender' class='inMed'
+							type='text' data-toggle='tooltip' placeholder='Gender'></td>
+						<td><input id='size' name='size' title='Size' class='inSml'
+							type='text' data-toggle='tooltip' placeholder='Med'></td>
+						<td><input id='loy' name='loy' title='Loyalty' class='inSml'
+							type='number' data-toggle='tooltip' Placeholder='1'></td>
 					</tr></table>
 
 					<!--Affinity Info--><table><tr>
 						<td>Affinity</td><td> </td><td>Combo</td>
 					</tr><tr>
-						<td><select id='type1' name='type1' onchange='update_type()' data-toggle='tooltip' title='Type 1'>
+						<td><select id='type1' name='type1' title='Type 1' data-toggle='tooltip' onchange='update_type()'>
 							<option value='neutral'>Neutral</option>
 							<option value='fire'>Fire</option>
 							<option value='water'>Water</option>
@@ -97,7 +101,7 @@
 							<option value='spirit'>Spirit</option>
 							<option value='decay'>Decay</option>
 						</select></td>
-						<td><select id='type2' name='type2' onchange='update_type()' data-toggle='tooltip' title='Type 2'>
+						<td><select id='type2' name='type2' title='Type 2' data-toggle='tooltip' onchange='update_type()'>
 							<option value='neutral'>Neutral</option>
 							<option value='fire'>Fire</option>
 							<option value='water'>Water</option>
@@ -106,7 +110,8 @@
 							<option value='spirit'>Spirit</option>
 							<option value='decay'>Decay</option>
 						</select></td>
-						<td><input id='typeC' name='typeC' type='text' class='inMed' value='' readonly data-toggle='tooltip' title='Combo Type'></td>
+						<td><input id='typeC' name='typeC' title='Combo Type' class='inMed'
+							type='text' data-toggle='tooltip' value='' readonly></td>
 					</tr></table></div>
 
 					<!--Points Info--><table><tr>
@@ -114,25 +119,31 @@
 						<!--Health--><td class='hpcol' valign='top'><fieldset class='fieldstack'>
 							<legend class='txsm'>Health</legend>
 							<div class='input-group'>
-								<input id='hpCur' name='hpCur' value='0' max='5' type='number' class='form-control' data-toggle='tooltip' title='Current'>
+								<input id='hpCur' name='hpCur' title='HP' class='form-control'
+									type='number' data-toggle='tooltip' value='6' max='6'>
 								<div class='input-group-append'><span class='input-group-text'>/</span></div>
-								<input id='hpCurMax' name='hpCurMax' value='5' type='number' class='form-control' readonly data-toggle='tooltip' title='Max'>
-								<button class='input-group-append' data-toggle='collapse' data-target='#exHp' type='button' title='Detail'>
+								<input id='hpCurMax' name='hpCurMax' title='Max HP' class='form-control'
+									type='number' data-toggle='tooltip' value='6' readonly>
+								<button title='Detail' class='input-group-append'
+									type='button' data-toggle='collapse' data-target='#exHp'>
 									<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 							</div>
 
 							<!-- Health Hide --><div id='exHp' class='collapse'>
 								<div class='input-group'>
 									<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-									<input id='hpPts' name='hpPts' value='5' max='10' type='number' class='form-control' onchange='update_hpCalc()'>
+									<input id='hpPts' name='hpPts' title='Health Points' class='form-control' 
+										type='number' data-toggle='tooltip' value='1' max='5' onchange='update_hpCalc()'>
 								</div>
 								<div class='input-group'>
 									<div class='input-group-prepend'><span class="input-group-text">Max</span></div>
-									<input id='hpPtsMax' name='hpPtsMax' value='10' type='number' class='form-control' onchange='update_hpCalc()'>
+									<input id='hpPtsMax' name='hpPtsMax' title='Points Maximum' class='form-control' 
+										type='number' data-toggle='tooltip' value='5' onchange='update_hpCalc()'>
 								</div>
 								<div class='input-group'>
 									<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-									<input id='hpMod' name='hpMod' value='0' type='number' class='form-control' onchange='update_hpCalc()'>
+									<input id='hpMod' name='hpMod' title='Bonus' class='form-control' 
+										type='number' data-toggle='tooltip' value='0' onchange='update_hpCalc()'>
 								</div>
 							</div>
 						</fieldset></td>
@@ -140,25 +151,31 @@
 						<!--Energy--><td class='hpcol' valign='top'><fieldset class='fieldstack'>
 							<legend class='txsm'>Energy</legend>
 							<div class='input-group'>
-								<input id='enCur' name='enCur' value='0' max='5' type='number' class='form-control' data-toggle='tooltip' title='Current'>
+								<input id='enCur' name='enCur' title='PP' class='form-control'
+									type='number' data-toggle='tooltip' value='2' max='2'>
 								<div class='input-group-append'><span class='input-group-text'>/</span></div>
-								<input id='enCurMax' name='enCurMax' value='5' type='number' class='form-control' readonly data-toggle='tooltip' title='Max'>
-								<button class='input-group-append' data-toggle='collapse' data-target='#exEn' type='button' title='Detail'>
+								<input id='enCurMax' name='enCurMax' title='Max PP' class='form-control'
+									type='number' data-toggle='tooltip' value='5' readonly>
+								<button title='Detail' class='input-group-append'
+									type='button' data-toggle='collapse' data-target='#exEn'>
 									<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 							</div>
 
 							<!-- Energy Hide --><div id='exEn' class='collapse'>
 								<div class='input-group'>
 									<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-									<input id='enPts' name='enPts' value='5' max='10' type='number' class='form-control' onchange='update_enCalc()'>
+									<input id='enPts' name='enPts' title='Energy Points' class='form-control'
+										type='number' data-toggle='tooltip' value='1' max='5' onchange='update_enCalc()'>
 								</div>
 								<div class='input-group'>
 									<div class='input-group-prepend'><span class="input-group-text">Max</span></div>
-									<input id='enPtsMax' name='enPtsMax' value='10' type='number' class='form-control' onchange='update_enCalc()'>
+									<input id='enPtsMax' name='enPtsMax' title='Points Maximum' class='form-control'
+										type='number' data-toggle='tooltip' value='5' onchange='update_enCalc()'>
 								</div>
 								<div class='input-group'>
 									<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-									<input id='enMod' name='enMod' value='0' type='number' class='form-control' onchange='update_enCalc()'>
+									<input id='enMod' name='enMod' title='Bonus' class='form-control'
+										type='number' data-toggle='tooltip' value='0' onchange='update_enCalc()'>
 								</div>
 							</div>
 						</fieldset></td>
@@ -166,24 +183,30 @@
 						<!--Knowledge--><td class='hpcol' valign='top'><fieldset class='fieldstack'>
 							<legend class='txsm'>Knowledge/Max</legend>
 							<div class='input-group'>
-								<input id='knCur' name='knCur' value='2' max='2' type='number' class='form-control' data-toggle='tooltip' title='Current'>
+								<input id='knCur' name='knCur' title='Current' class='form-control'
+									type='number' data-toggle='tooltip' value='2' max='2'>
 								<div class='input-group-append'><span class='input-group-text'>/</span></div>
-								<input id='knCurMax' name='knCurMax' value='2' type='number' class='form-control' readonly data-toggle='tooltip' title='Max'>
-								<button class='input-group-append' data-toggle='collapse' data-target='#exKn' type='button' title='Detail'>
+								<input id='knCurMax' name='knCurMax' title='Max' class='form-control'
+									type='number' data-toggle='tooltip' value='2' readonly>
+								<button title='Detail' class='input-group-append'
+									type='button' data-toggle='collapse' data-target='#exKn'>
 									<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 							</div>
 							<!-- Knowledge Hide --><div id='exKn' class='collapse'>
 								<div class='input-group'>
 									<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-									<input id='knPts' name='knPts' value='1' max='10' type='number' class='form-control' onchange='update_knCalc()'>
+									<input id='knPts' name='knPts' title='Knowledge Points' class='form-control'
+										type='number' data-toggle='tooltip' value='1' max='10' onchange='update_knCalc()'>
 								</div>
 								<div class='input-group'>
 									<div class='input-group-prepend'><span class="input-group-text">Max</span></div>
-									<input id='knPtsMax' name='knPtsMax' value='10' type='number' class='form-control' onchange='update_knCalc()'>
+									<input id='knPtsMax' name='knPtsMax' title='Points Maximum' class='form-control' 
+										type='number' data-toggle='tooltip' value='5' onchange='update_knCalc()'>
 								</div>
 								<div class='input-group'>
 									<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-									<input id='knMod' name='knMod' value='0' type='number' class='form-control' onchange='update_knCalc()'>
+									<input id='knMod' name='knMod' title='Bonus' class='form-control' 
+										type='number' data-toggle='tooltip' value='0' onchange='update_knCalc()'>
 								</div>
 							</div>
 						</fieldset></td>
@@ -191,20 +214,20 @@
 						<!--Initiative--><td class='hpcol' valign='top'><fieldset class='fieldstack'>
 							<legend class='txsm'>Initiative</legend>
 							<div class='input-group'>
-								<input id='initCur' value='0' type='number' class='form-control' readonly data-toggle='tooltip' title='Current'>
-								<button class='input-group-append' type='button' onclick='roll_init()' data-toggle='tooltip' title='Roll'>&#127922;</button>
-								<button class='input-group-append' data-toggle='collapse' data-target='#exInit' type='button' title='Detail'>
+								<input id='initCur' title='Initiative Roll' class='form-control' 
+									type='number' data-toggle='tooltip' value='0' readonly>
+								<button title='Roll' class='input-group-append'
+									type='button' data-toggle='tooltip' onclick='roll_init()'>&#127922;</button>
+								<button title='Detail' class='input-group-append'
+									type='button' data-toggle='collapse' data-target='#exInit'>
 									<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 							</div>
 
 							<!-- Initiative Hide --><div id='exInit' class='collapse'>
 								<div class='input-group'>
-									<div class='input-group-prepend'><span class="input-group-text">Base</span></div>
-									<input id='initPts' value='0' type='number' class='form-control' readonly>
-								</div>
-								<div class='input-group'>
 									<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-									<input id='initMod' value='0' type='number' class='form-control' onchange='update_init()'>
+									<input id='initMod' name='initMod' title='Bonus' class='form-control'
+										type='number' data-toggle='tooltip' value='0' onchange='update_init()'>
 								</div>
 							</div>
 						</fieldset></td>
@@ -212,9 +235,11 @@
 						<!--XP & LV--><td class='hpcol' valign='top'><fieldset class='fieldstack'>
 							<legend class='txsm'>Xp & Lv</legend>
 							<div class='input-group'>
-								<input id='xp' type='number' class='form-control' data-toggle='tooltip' title='XP'>
+								<input id='xp' name='xp' title='XP' class='form-control' 
+									type='number' data-toggle='tooltip' value='0'>
 								<div class='input-group-append'><span class='input-group-text'>/</span></div>
-								<input id='lv' type='number' class='form-control' data-toggle='tooltip' title='Level'>
+								<input id='lv' name='lv' title='Level' class='form-control'
+									type='number' data-toggle='tooltip' value='1'>
 							</div>
 						</fieldset></td>
 
@@ -229,24 +254,29 @@
 							<fieldset class='fieldstack'>
 								<legend class='txsm'>Attack</legend>
 								<div class='input-group'>
-									<input id='atk' name='atk' type='number' class='form-control' readonly>
-									<button class='input-group-append' type='button' onclick='roll_atk()' data-toggle='tooltip' title='Roll'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exAtk' type='button' title='Detail'>
+									<input id='atk' name='atk' title='Attack' class='form-control' type='number' value='1' readonly>
+									<button title='Roll' class='input-group-append'
+										type='button' data-toggle='tooltip' onclick='roll_atk()'>&#127922;</button>
+									<button title='Detail' class='input-group-append'
+										type='button' data-toggle='collapse' data-target='#exAtk'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 
 								<!-- Attack Hide --><div id='exAtk' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='atkPts' name='atkPts' type='number' class='form-control' onchange='update_atk()'>
+										<input id='atkPts' name='atkPts' title='Points' class='form-control'
+											type='number' value='1' max='5' onchange='update_atk()'>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Max</span></div>
-										<input id='atkPtsMax' name='atkPtsMax' type='number' class='form-control' onchange='update_atk()'>
+										<input id='atkPtsMax' name='atkPtsMax' title='Max' class='form-control'
+											type='number' value='5' onchange='update_atk()'>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='atkMod' name='atkMod' type='number' class='form-control' onchange='update_atk()'>
+										<input id='atkMod' name='atkMod' title='Bonus' class='form-control'
+											type='number' value='0' onchange='update_atk()'>
 									</div>
 								</div>
 							</fieldset>
@@ -256,24 +286,29 @@
 							<fieldset class='fieldstack'>
 								<legend class='txsm'>Defence</legend>
 								<div class='input-group'>
-									<input id='def' name='def' type='number' class='form-control' readonly>
-									<button class='input-group-append' type='button' onclick='roll_def()' data-toggle='tooltip' title='Roll'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exDef' type='button' title='Detail'>
+									<input id='def' name='def' title='Defence' class='form-control' type='number' value='1' readonly>
+									<button title='Roll' class='input-group-append'
+										type='button' data-toggle='tooltip' onclick='roll_def()'>&#127922;</button>
+									<button title='Detail' class='input-group-append'
+										type='button' data-toggle='collapse' data-target='#exDef'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 
 								<!-- Defence Hide --><div id='exDef' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='defPts' name='defPts' type='number' class='form-control' onchange='update_def()'>
+										<input id='defPts' name='defPts' title='Points' class='form-control'
+											type='number' value='1' max='5' onchange='update_def()'>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Max</span></div>
-										<input id='defPtsMax' name='defPtsMax' type='number' class='form-control' onchange='update_def()'>
+										<input id='defPtsMax' name='defPtsMax' title='Max' class='form-control'
+											type='number' value='5' onchange='update_def()'>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='defMod' name='defMod' type='number' class='form-control' onchange='update_def()'>
+										<input id='defMod' name='defMod' title='Bonus' class='form-control'
+											type='number' value='0' onchange='update_def()'>
 									</div>
 								</div>
 							</fieldset>
@@ -283,24 +318,29 @@
 							<fieldset class='fieldstack'>
 								<legend class='txsm'>Agility</legend>
 								<div class='input-group'>
-									<input id='agi' name='agi' type='number' class='form-control' readonly>
-									<button class='input-group-append' type='button' onclick='roll_agi()' data-toggle='tooltip' title='Roll'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exAgi' type='button' title='Detail'>
+									<input id='agi' name='agi' title='Agility' class='form-control' type='number' value='1' readonly>
+									<button title='Roll' class='input-group-append'
+										type='button' data-toggle='tooltip' onclick='roll_agi()'>&#127922;</button>
+									<button title='Detail' class='input-group-append'
+										type='button' data-toggle='collapse' data-target='#exAgi'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 
 								<!-- Agility Hide --><div id='exAgi' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='agiPts' name='agiPts' type='number' class='form-control' onchange='update_agi()'>
+										<input id='agiPts' name='agiPts' title='Points' class='form-control'
+											type='number' value='1' max='5' onchange='update_agi()'>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Max</span></div>
-										<input id='agiPtsMax' name='agiPtsMax' type='number' class='form-control' onchange='update_agi()'>
+										<input id='agiPtsMax' name='agiPtsMax' title='Max' class='form-control'
+											type='number' value='5' onchange='update_agi()'>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='agiMod' name='agiMod' type='number' class='form-control' onchange='update_agi()'>
+										<input id='agiMod' name='agiMod' title='Bonus' class='form-control'
+											type='number' value='0' onchange='update_agi()'>
 									</div>
 								</div>
 							</fieldset>
@@ -310,24 +350,29 @@
 							<fieldset class='fieldstack'>
 								<legend class='txsm'>Speed</legend>
 								<div class='input-group'>
-									<input id='spd' name='spd' type='number' class='form-control' readonly>
-									<button class='input-group-append' type='button' onclick='roll_spd()' data-toggle='tooltip' title='Roll'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exSpd' type='button' title='Detail'>
+									<input id='spd' name='spd' title='Speed' class='form-control' type='number' value='1' readonly>
+									<button title='Roll' class='input-group-append'
+										type='button' data-toggle='tooltip' onclick='roll_spd()'>&#127922;</button>
+									<button title='Detail' class='input-group-append'
+										type='button' data-toggle='collapse' data-target='#exSpd'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 
 								<!-- Speed Hide --><div id='exSpd' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='spdPts' name='spdPts' type='number' class='form-control' onchange='update_spd()'>
+										<input id='spdPts' name='spdPts' title='Points' class='form-control'
+											type='number' value='1' max='5' onchange='update_spd()'>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Max</span></div>
-										<input id='spdPtsMax' name='spdPtsMax' type='number' class='form-control' onchange='update_spd()'>
+										<input id='spdPtsMax' name='spdPtsMax' title='Max' class='form-control'
+											type='number' value='5' onchange='update_spd()'>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='spdMod' name='spdMod' type='number' class='form-control' onchange='update_spd()'>
+										<input id='spdMod' name='spdMod' title='Bonus' class='form-control'
+											type='number' value='0' onchange='update_spd()'>
 									</div>
 								</div>
 							</fieldset>
@@ -339,109 +384,123 @@
 						<!-- Physical --><td class='col-sm-1' valign='top'>
 							<fieldset class='fieldstack'>
 								<legend class='txsm'>Physical Skills
-								<button data-toggle='collapse' data-target='#exPhysical' type='button' style='float:right;' title='Detail'>
+								<button title='Detail' style='float:right;' type='button' data-toggle='collapse' data-target='#exPhysical'>
 									<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</legend>
 
 								<div class='collapse' id='exPhysical'>
 									<div class='input-group'>
-										<input id='phys' name='phys' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' max='5'>
+										<input id='phys' name='phys' title='Points' class='form-control'
+											type='number' data-toggle='tooltip' value='0' max='5'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input title='Max' class='form-control' type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-append'><span class="input-group-text">Bonus</span></div>
-										<input id='physMod' name='physMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' placeholder='1' max='5'>
+										<input id='physMod' name='physMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' max='5'>
 									</div>
 								</div>
 
 								<!-- Acrobatics --><div class='input-group'>
 									<div class='input-group-prepend'><span class='input-group-text'>Acrobatics</span></div>
-									<input id='acroSkl' name='acroSkl' type='number' class='form-control' readonly data-toggle='tooltip' title='Total'>
-									<button class='input-group-append' type='button' onclick='roll_acro()' data-toggle='tooltip' title='Roll Acrobatics'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exAcro' type='button' title='Detail'>
+									<input id='acroSkl' name='acroSkl' title='Total' class='form-control'
+										type='number' data-toggle='tooltip' value='1' readonly>
+									<button title='Roll Acrobatics' class='input-group-append'
+										type='button' data-toggle='tooltip' onclick='roll_acro()'>&#127922;</button>
+									<button title='Detail' class='input-group-append'
+										type='button' data-toggle='collapse' data-target='#exAcro'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Acrobatics Hide --><div id='exAcro' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='acroPts' name='acroPts' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' onchange='update_acro()' max='5'>
+										<input id='acroPts' name='acroPts' title='Points' class='form-control' 
+											type='number' data-toggle='tooltip' value='0' max='5' onchange='update_acro()'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input title='Max' class='form-control' type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='acroMod' name='acroMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' onchange='update_acro()'>
+										<input id='acroMod' name='acroMod' title='Bonus' class='form-control' 
+											type='number' data-toggle='tooltip' value='0' onchange='update_acro()'>
 									</div>
 								</div><!-- End Acrobatics -->
 
 								<!-- Athletics --><div class='input-group'>
 									<div class='input-group-prepend'><span class='input-group-text'>Athletics</span></div>
-									<input id='athlSkl' name='athlSkl' type='number' class='form-control' readonly data-toggle='tooltip' title='Total'>
-									<button class='input-group-append' type='button' onclick='roll_athl()' data-toggle='tooltip' title='Roll Athletics'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exAthl' type='button' title='Detail'>
+									<input id='athlSkl' name='athlSkl' title='Total' class='form-control'
+										type='number' data-toggle='tooltip' value='1' readonly>
+									<button title='Roll Athletics' class='input-group-append'
+										type='button' data-toggle='tooltip' onclick='roll_athl()'>&#127922;</button>
+									<button title='Detail' class='input-group-append'
+										type='button' data-toggle='collapse' data-target='#exAthl'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Athletics Hide --><div id='exAthl' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='athlPts' name='athlPts' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' onchange='update_athl()' max='5'>
+										<input id='athlPts' name='athlPts' title='Points' class='form-control' 
+											type='number' data-toggle='tooltip' value='0' max='5' onchange='update_athl()'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input class='form-control' type='number' data-toggle='tooltip' title='Max' value='5' readonly>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='athlMod' name='athlMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' onchange='update_athl()'>
+										<input id='athlMod' name='athlMod' title='Bonus' class='form-control' 
+											type='number' data-toggle='tooltip' value='0' onchange='update_athl()'>
 									</div>
 								</div><!-- End Athletics -->
 
 								<!-- Combat --><div class='input-group'>
 									<div class='input-group-prepend'><span class='input-group-text'>Combat</span></div>
-									<input id='combSkl' name='combSkl' type='number' class='form-control' readonly data-toggle='tooltip' title='Total'>
-									<button class='input-group-append' type='button' onclick='roll_comb()' data-toggle='tooltip' title='Roll Combat'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exComb' type='button' title='Detail'>
+									<input id='combSkl' name='combSkl' title='Total' class='form-control' 
+										type='number' data-toggle='tooltip' value='1' readonly>
+									<button title='Roll Combat' class='input-group-append' 
+										type='button' data-toggle='tooltip' onclick='roll_comb()'>&#127922;</button>
+									<button title='Detail' class='input-group-append' 
+										type='button' data-toggle='collapse' data-target='#exComb'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Combat Hide --><div id='exComb' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='combPts' name='combPts' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' onchange='update_comb()' max='5'>
+										<input id='combPts' name='combPts' title='Points' class='form-control' 
+											type='number' data-toggle='tooltip' value='0' max='5' onchange='update_comb()'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input title='Max' class='form-control' 
+											type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='combMod' name='combMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' onchange='update_comb()'>
+										<input id='combMod' name='combMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' onchange='update_comb()'>
 									</div>
 								</div><!-- End Combat -->
 
 								<!-- Stealth --><div class='input-group'>
 									<div class='input-group-prepend'><span class='input-group-text'>Stealth</span></div>
-									<input id='steaSkl' name='steaSkl' type='number' class='form-control' readonly data-toggle='tooltip' title='Total'>
-									<button class='input-group-append' type='button' onclick='roll_stea()' data-toggle='tooltip' title='Roll Stealth'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exStea' type='button' title='Detail'>
+									<input id='steaSkl' name='steaSkl' title='Total' class='form-control'
+										type='number' data-toggle='tooltip' value='1' readonly>
+									<button title='Roll Stealth' class='input-group-append'
+										type='button' data-toggle='tooltip' onclick='roll_stea()'>&#127922;</button>
+									<button title='Detail' class='input-group-append'
+										type='button' data-toggle='collapse' data-target='#exStea'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Stealth Hide --><div id='exStea' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='steaPts' name='steaPts' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' onchange='update_stea()' max='5'>
+										<input id='steaPts' name='steaPts' title='Points' class='form-control'
+											type='number' data-toggle='tooltip' value='0' max='5' onchange='update_stea()'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input title='Max' class='form-control'
+											type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='steaMod' name='steaMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' onchange='update_stea()'>
+										<input id='steaMod' name='steaMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' onchange='update_stea()'>
 									</div>
 								</div><!-- End Stealth -->
 
@@ -451,109 +510,124 @@
 						<!-- Mental --><td class='col-sm-1' valign='top'>
 							<fieldset class='fieldstack'>
 								<legend class='txsm'>Mental Skills
-								<button data-toggle='collapse' data-target='#exMental' type='button' style='float:right;' title='Detail'>
+								<button title='Detail' style='float:right;'
+									type='button' data-toggle='collapse' data-target='#exMental'>
 									<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</legend>
 
 								<div class='collapse' id='exMental'>
 									<div class='input-group'>
-										<input id='ment' name='ment' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' max='5'>
+										<input id='ment' name='ment' title='Points' class='form-control'
+											type='number' data-toggle='tooltip' value='0' max='5'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input title='Max' class='form-control' type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-append'><span class="input-group-text">Bonus</span></div>
-										<input id='mentMod' name='mentMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' placeholder='1' max='5'>
+										<input id='mentMod' name='mentMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' max='5'>
 									</div>
 								</div>
 
 								<!-- Investigation --><div class='input-group'>
 									<div class='input-group-prepend'><span class='input-group-text'>Investigation</span></div>
-									<input id='inveSkl' name='inveSkl' type='number' class='form-control' readonly data-toggle='tooltip' title='Total'>
-									<button class='input-group-append' type='button' onclick='roll_inve()' data-toggle='tooltip' title='Roll Investigation'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exInve' type='button' title='Detail'>
+									<input id='inveSkl' name='inveSkl' title='Total' class='form-control'
+										type='number' data-toggle='tooltip' value='1' readonly>
+									<button title='Roll Investigation' class='input-group-append'
+										type='button' data-toggle='tooltip' onclick='roll_inve()'>&#127922;</button>
+									<button title='Detail' class='input-group-append'
+										type='button' data-toggle='collapse' data-target='#exInve'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Investigation Hide --><div id='exInve' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='invePts' name='invePts' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' onchange='update_inve()' max='5'>
+										<input id='invePts' name='invePts' title='Points' class='form-control'
+											type='number' data-toggle='tooltip' value='0' max='5' onchange='update_inve()'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input title='Max' class='form-control'
+											type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='inveMod' name='ainveMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' onchange='update_inve()'>
+										<input id='inveMod' name='inveMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' onchange='update_inve()'>
 									</div>
 								</div><!-- End Investigation -->
 
 								<!-- Medicine --><div class='input-group'>
 									<div class='input-group-prepend'><span class='input-group-text'>Medicine</span></div>
-									<input id='mediSkl' name='mediSkl' type='number' class='form-control' readonly data-toggle='tooltip' title='Total'>
-									<button class='input-group-append' type='button' onclick='roll_medi()' data-toggle='tooltip' title='Roll Medicine'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exMedi' type='button' title='Detail'>
+									<input id='mediSkl' name='mediSkl' title='Total' class='form-control'
+										type='number' data-toggle='tooltip' value='1' readonly>
+									<button title='Roll Medicine' class='input-group-append'
+										type='button' data-toggle='tooltip' onclick='roll_medi()'>&#127922;</button>
+									<button title='Detail' class='input-group-append' type='button' data-toggle='collapse' data-target='#exMedi'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Medicine Hide --><div id='exMedi' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='mediPts' name='mediPts' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' onchange='update_medi()' max='5'>
+										<input id='mediPts' name='mediPts' title='Points' class='form-control'
+											type='number' data-toggle='tooltip' value='0' max='5' onchange='update_medi()'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input title='Max' class='form-control' type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='mediMod' name='mediMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' onchange='update_medi()'>
+										<input id='mediMod' name='mediMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' onchange='update_medi()'>
 									</div>
 								</div><!-- End Medicine -->
 
 								<!-- Perception --><div class='input-group'>
 									<div class='input-group-prepend'><span class='input-group-text'>Perception</span></div>
-									<input id='percSkl' name='percSkl' type='number' class='form-control' readonly data-toggle='tooltip' title='Total'>
-									<button class='input-group-append' type='button' onclick='roll_perc()' data-toggle='tooltip' title='Roll Perception'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exPerc' type='button' title='Detail'>
+									<input id='percSkl' name='percSkl' title='Total' class='form-control'
+										type='number' data-toggle='tooltip' value='1' readonly>
+									<button title='Roll Perception' class='input-group-append'
+										type='button' data-toggle='tooltip' onclick='roll_perc()'>&#127922;</button>
+									<button title='Detail' class='input-group-append'
+										type='button' data-toggle='collapse' data-target='#exPerc'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Perception Hide --><div id='exPerc' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
 										<input id='percPts' name='percPts' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' onchange='update_perc()' max='5'>
+											data-toggle='tooltip' title='Points' value='0' onchange='update_perc()' max='5'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input readonly type='number' class='form-control'
+											data-toggle='tooltip' title='Max' value='5'>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='percMod' name='percMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' onchange='update_perc()'>
+										<input id='percMod' name='percMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' onchange='update_perc()'>
 									</div>
 								</div><!-- End Perception -->
 
 								<!-- Survival --><div class='input-group'>
 									<div class='input-group-prepend'><span class='input-group-text'>Survival</span></div>
-									<input id='survSkl' name='survSkl' type='number' class='form-control' readonly data-toggle='tooltip' title='Total'>
-									<button class='input-group-append' type='button' onclick='roll_surv()' data-toggle='tooltip' title='Roll Survival'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exSurv' type='button' title='Detail'>
+									<input id='survSkl' name='survSkl' title='Total' class='form-control'
+										type='number' data-toggle='tooltip' value='1' readonly>
+									<button title='Roll Survival' class='input-group-append'
+										type='button' data-toggle='tooltip' onclick='roll_surv()'>&#127922;</button>
+									<button title='Detail' class='input-group-append'
+										type='button' data-toggle='collapse' data-target='#exSurv'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Survival Hide --><div id='exSurv' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='survPts' name='survPts' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' onchange='update_surv()' max='5'>
+										<input id='survPts' name='survPts' title='Points' class='form-control'
+											type='number' data-toggle='tooltip' value='0' onchange='update_surv()' max='5'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input title='Max' type='number' class='form-control'
+											data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='survMod' name='survMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' onchange='update_surv()'>
+										<input id='survMod' name='survMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' onchange='update_surv()'>
 									</div>
 								</div><!-- End Survival -->
 							</fieldset>
@@ -562,109 +636,126 @@
 						<!-- Social --><td class='col-sm-1' valign='top'>
 							<fieldset class='fieldstack'>
 								<legend class='txsm'>Social Skills
-								<button data-toggle='collapse' data-target='#exSocial' type='button' style='float:right;' title='Detail'>
+								<button title='Detail' style='float:right;' 
+									type='button' data-toggle='collapse' data-target='#exSocial'>
 									<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</legend>
 
 								<div class='collapse' id='exSocial'>
 									<div class='input-group'>
-										<input id='soci' name='soci' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' max='5'>
+										<input id='soci' name='soci' title='Points' class='form-control'
+											type='number' data-toggle='tooltip' value='0' max='5'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input title='Max' class='form-control'
+											type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-append'><span class="input-group-text">Bonus</span></div>
-										<input id='sociMod' name='sociMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' placeholder='1' max='5'>
+										<input id='sociMod' name='sociMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' max='5'>
 									</div>
 								</div>
 
 								<!-- Command --><div class='input-group'>
 									<div class='input-group-prepend'><span class='input-group-text'>Command</span></div>
-									<input id='commSkl' name='commSkl' type='number' class='form-control' readonly data-toggle='tooltip' title='Total'>
-									<button class='input-group-append' type='button' onclick='roll_comm()' data-toggle='tooltip' title='Roll Command'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exComm' type='button' title='Detail'>
+									<input id='commSkl' name='commSkl' title='Total' class='form-control'
+										type='number' data-toggle='tooltip' value='1' readonly>
+									<button title='Roll Command' class='input-group-append'
+										type='button' data-toggle='tooltip' onclick='roll_comm()'>&#127922;</button>
+									<button title='Detail' class='input-group-append'
+										type='button' data-toggle='collapse' data-target='#exComm'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Command Hide --><div id='exComm' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='commPts' name='commPts' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' onchange='update_comm()' max='5'>
+										<input id='commPts' name='commPts' title='Points' class='form-control'
+											type='number' data-toggle='tooltip' value='0' max='5' onchange='update_comm()'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input title='Max' class='form-control'
+											type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='commMod' name='commMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' onchange='update_comm()'>
+										<input id='commMod' name='commMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' onchange='update_comm()'>
 									</div>
 								</div><!-- End Command -->
 
 								<!-- Deception --><div class='input-group'>
 									<div class='input-group-prepend'><span class='input-group-text'>Deception</span></div>
-									<input id='deceSkl' name='deceSkl' type='number' class='form-control' readonly data-toggle='tooltip' title='Total'>
-									<button class='input-group-append' type='button' onclick='roll_dece()' data-toggle='tooltip' title='Roll Deception'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exDece' type='button' title='Detail'>
+									<input id='deceSkl' name='deceSkl' title='Total' class='form-control'
+										type='number' data-toggle='tooltip' value='1' readonly>
+									<button title='Roll Deception' class='input-group-append'
+										type='button' data-toggle='tooltip' onclick='roll_dece()'>&#127922;</button>
+									<button title='Detail' class='input-group-append'
+										type='button' data-toggle='collapse' data-target='#exDece'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Deception Hide --><div id='exDece' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='decePts' name='decePts' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' onchange='update_dece()' max='5'>
+										<input id='decePts' name='decePts' title='Points' class='form-control'
+											type='number' data-toggle='tooltip' value='0' max='5' onchange='update_dece()'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input title='Max' class='form-control'
+											type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='deceMod' name='deceMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' onchange='update_dece()'>
+										<input id='deceMod' name='deceMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' onchange='update_dece()'>
 									</div>
 								</div><!-- End Deception -->
 
 								<!-- Intuition --><div class='input-group'>
 									<div class='input-group-prepend'><span class='input-group-text'>Intuition</span></div>
-									<input id='intuSkl' name='intuSkl' type='number' class='form-control' readonly data-toggle='tooltip' title='Total'>
-									<button class='input-group-append' type='button' onclick='roll_intu()' data-toggle='tooltip' title='Roll Intuition'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exIntu' type='button' title='Detail'>
+									<input id='intuSkl' name='intuSkl' title='Total' class='form-control'
+										type='number' data-toggle='tooltip' value='1' readonly>
+									<button title='Roll Intuition' class='input-group-append'
+										type='button' data-toggle='tooltip' onclick='roll_intu()'>&#127922;</button>
+									<button title='Detail' class='input-group-append'
+										type='button' data-toggle='collapse' data-target='#exIntu'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Intuition Hide --><div id='exIntu' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='intuPts' name='intuPts' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' onchange='update_intu()' max='5'>
+										<input id='intuPts' name='intuPts' title='Points' class='form-control'
+											type='number' data-toggle='tooltip' value='0' max='5' onchange='update_intu()'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input title='Max' class='form-control'
+											type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='combMod' name='combMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' onchange='update_intu()'>
+										<input id='intuMod' name='intuMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' onchange='update_intu()'>
 									</div>
 								</div><!-- End Intuition -->
 
 								<!-- Persuasion --><div class='input-group'>
 									<div class='input-group-prepend'><span class='input-group-text'>Persuasion</span></div>
-									<input id='persSkl' name='persSkl' type='number' class='form-control' readonly data-toggle='tooltip' title='Total'>
-									<button class='input-group-append' type='button' onclick='roll_pers()' data-toggle='tooltip' title='Roll Persuasion'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exPers' type='button' title='Detail'>
+									<input id='persSkl' name='persSkl' title='Total' class='form-control'
+										type='number' data-toggle='tooltip' value='1' readonly>
+									<button title='Roll Persuasion' class='input-group-append'
+										type='button' data-toggle='tooltip' onclick='roll_pers()'>&#127922;</button>
+									<button title='Detail' class='input-group-append'
+										type='button' data-toggle='collapse' data-target='#exPers'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Persuasion Hide --><div id='exPers' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='persPts' name='persPts' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' onchange='update_pers()' max='5'>
+										<input id='persPts' name='persPts' title='Points' class='form-control'
+											type='number' data-toggle='tooltip' value='0' onchange='update_pers()' max='5'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
 										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='persMod' name='persMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' onchange='update_pers()'>
+										<input id='persMod' name='persMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' onchange='update_pers()'>
 									</div>
 								</div><!-- End Persuasion -->
 							</fieldset>
@@ -679,103 +770,119 @@
 
 								<div class='collapse' id='exMagic'>
 									<div class='input-group'>
-										<input id='magi' name='magi' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' max='5'>
+										<input id='magi' name='magi' title='Points' class='form-control'
+											type='number' data-toggle='tooltip' value='0' max='5'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input title='Max' class='form-control'
+											type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-append'><span class="input-group-text">Bonus</span></div>
-										<input id='magiMod' name='magiMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' placeholder='1' max='5'>
+										<input id='magiMod' name='magiMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' max='5'>
 									</div>
 								</div>
 
 								<!-- Channelling --><div class='input-group'>
 									<div class='input-group-prepend'><span class='input-group-text'>Channelling</span></div>
-									<input id='chanSkl' name='chanSkl' type='number' class='form-control' readonly data-toggle='tooltip' title='Total'>
-									<button class='input-group-append' type='button' onclick='roll_chan()' data-toggle='tooltip' title='Roll Channelling'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exChan' type='button' title='Detail'>
+									<input id='chanSkl' name='chanSkl' title='Total' class='form-control' 
+										type='number' data-toggle='tooltip' value='1' readonly>
+									<button title='Roll Channelling' class='input-group-append'
+										type='button' data-toggle='tooltip' onclick='roll_chan()'>&#127922;</button>
+									<button title='Detail' class='input-group-append'
+										type='button' data-toggle='collapse' data-target='#exChan'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Channelling Hide --><div id='exChan' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='chanPts' name='chanPts' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' onchange='update_chan()' max='5'>
+										<input id='chanPts' name='chanPts' title='Points' class='form-control'
+											type='number' data-toggle='tooltip' value='0' max='5' onchange='update_chan()'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input title='Max' class='form-control'
+											type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='chanMod' name='chanMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' onchange='update_chan()'>
+										<input id='chanMod' name='chanMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' onchange='update_chan()'>
 									</div>
 								</div><!-- End Channelling -->
 
 								<!-- Divining --><div class='input-group'>
 									<div class='input-group-prepend'><span class='input-group-text'>Divining</span></div>
-									<input id='diviSkl' name='diviSkl' type='number' class='form-control' readonly data-toggle='tooltip' title='Total'>
-									<button class='input-group-append' type='button' onclick='roll_divi()' data-toggle='tooltip' title='Roll Divining'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exDivi' type='button' title='Detail'>
+									<input id='diviSkl' name='diviSkl' title='Total' class='form-control'
+										type='number' data-toggle='tooltip' value='1' readonly>
+									<button title='Roll Divining' class='input-group-append' 
+										type='button' data-toggle='tooltip' onclick='roll_divi()'>&#127922;</button>
+									<button title='Detail' class='input-group-append' 
+										type='button' data-toggle='collapse' data-target='#exDivi'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Divining Hide --><div id='exDivi' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
 										<input id='diviPts' name='diviPts' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' onchange='update_divi()' max='5'>
+											data-toggle='tooltip' title='Points' value='0' onchange='update_divi()' max='5'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
 										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='diviMod' name='diviMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' onchange='update_divi()'>
+										<input id='diviMod' name='diviMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' onchange='update_divi()'>
 									</div>
 								</div><!-- End Divining -->
 
 								<!-- Focus --><div class='input-group'>
 									<div class='input-group-prepend'><span class='input-group-text'>Focus</span></div>
-									<input id='focuSkl' name='focuSkl' type='number' class='form-control' readonly data-toggle='tooltip' title='Total'>
-									<button class='input-group-append' type='button' onclick='roll_focu()' data-toggle='tooltip' title='Roll Focus'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exFocu' type='button' title='Detail'>
+									<input id='focuSkl' name='focuSkl' title='Total' class='form-control'
+										type='number' data-toggle='tooltip' value='1' readonly>
+									<button title='Roll Focus' class='input-group-append' 
+										type='button' data-toggle='tooltip' onclick='roll_focu()'>&#127922;</button>
+									<button title='Detail' class='input-group-append' 
+										type='button' data-toggle='collapse' data-target='#exFocu'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Focus Hide --><div id='exFocu' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='focuPts' name='focuPts' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' onchange='update_focu()' max='5'>
+										<input id='focuPts' name='focuPts' title='Points' class='form-control'
+											type='number' data-toggle='tooltip' value='0' max='5' onchange='update_focu()'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input title='Max' class='form-control'
+											type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='focuMod' name='focuMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' onchange='update_focu()'>
+										<input id='focuMod' name='focuMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' onchange='update_focu()'>
 									</div>
 								</div><!-- End Focus -->
 
 								<!-- Summoning --><div class='input-group'>
 									<div class='input-group-prepend'><span class='input-group-text'>Summoning</span></div>
-									<input id='summSkl' name='summSkl' type='number' class='form-control' readonly data-toggle='tooltip' title='Total'>
-									<button class='input-group-append' type='button' onclick='roll_summ()' data-toggle='tooltip' title='Roll Summoning'>&#127922;</button>
-									<button class='input-group-append' data-toggle='collapse' data-target='#exSumm' type='button' title='Detail'>
+									<input id='summSkl' name='summSkl' title='Total' class='form-control' 
+										type='number' data-toggle='tooltip' value='1' readonly>
+									<button title='Roll Summoning' class='input-group-append'
+										type='button' data-toggle='tooltip' onclick='roll_summ()'>&#127922;</button>
+									<button title='Detail' class='input-group-append'
+										type='button' data-toggle='collapse' data-target='#exSumm'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Summoning Hide --><div id='exSumm' class='collapse'>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='summPts' name='summPts' type='number' class='form-control'
-											data-toggle='tooltip' title='Points' placeholder='1' onchange='update_summ()' max='5'>
+										<input id='summPts' name='summPts' title='Points' class='form-control'
+											type='number' data-toggle='tooltip' value='0' max='5' onchange='update_summ()'>
 										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<input title='Max' class='form-control'
+											type='number' data-toggle='tooltip' value='5'>
 									</div>
 									<div class='input-group'>
 										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='summMod' name='summMod' type='number' class='form-control'
-											data-toggle='tooltip' title='Bonus' onchange='update_summ()'>
+										<input id='summMod' name='summMod' title='Bonus' class='form-control'
+											type='number' data-toggle='tooltip' value='0' onchange='update_summ()'>
 									</div>
 								</div><!-- End Summoning -->
 							</fieldset>
@@ -791,37 +898,40 @@
 
 						<!--Money--><fieldset class='fieldstack'>
 							<legend class='txsm'>Kinstones</legend>
-							<input id='stones' type='number' class='inMed'>
+							<input id='kinstones' name='kinstones' title='Kinstones' class='inMed' type='number'>
 						</fieldset>
 
 						<!--Usable--><fieldset class='fieldstack'>
 							<legend class='txsm'>Bag
-								<button data-toggle='collapse' data-target='#askItem' type='button' style='float:right;'>
+								<button title='Help' style='float:right;' type='button' data-toggle='collapse' data-target='#askItem'>
 									<img src="https://img.icons8.com/material-outlined/24/000000/ask-question.png"></button>
-								<button class='Item add' type='button' data-toggle='tooltip' title='Add Item'>
+								<button title='Add Item' class='Item add' type='button' data-toggle='tooltip'>
 									<img src="https://img.icons8.com/android/24/000000/plus.png"></button>
 							</legend>
 							<!-- Usable Help -->
 							<div id='askItem' class='collapse'>
 								This category is for Usable items.<br>
-								"<span class='glyphicon glyphicon-comment'></span>" will remove one of the item and announce that you used it.
+								"&#127922;" will remove one of the item and announce that you used it.
 							</div>
 
 							<!-- Repeating Usable -->
 							<div class='repeatingItem'>
-								<input name='itemName_1' id='itemName_1' type='text' class='line inMove' value='' placeholder='Item Name' data-toggle='tooltip' title='Item Name'/>
-								<input name='itemCnt_1' id='itemCnt_1' type='number' class='line inSml' value='' placeholder='0' data-toggle='tooltip' title='Number'/>
-								<button class='Item del' type='button' data-toggle='tooltip' title='Delete'>
+								<input id='itemName_1' name='itemName_1' title='Item Name' class='line inMove'
+									type='text' data-toggle='tooltip' value='' placeholder='Item Name'>
+								<input id='itemCnt_1' name='itemCnt_1' title='Number' class='line inSml'
+									type='number' data-toggle='tooltip' value='0'>
+								<button title='Delete' class='Item del' type='button' data-toggle='tooltip'>
 									<img src="https://img.icons8.com/material/24/000000/trash.png"></button>
-								<button class='Item use' type='button' data-toggle='tooltip' title='Use'>&#127922;</button>
+								<button title='Use' class='Item use' type='button' data-toggle='tooltip'>&#127922;</button>
 							</div>
 						</fieldset> <!-- End Usable -->
 
 						<!--Gear--><fieldset class='fieldstack'>
 							<legend class='txsm'>Gear
-								<button data-toggle='collapse' data-target='#askGear' type='button'>
+								<button title='Help' type='button' data-toggle='collapse' data-target='#askGear'>
 									<img src="https://img.icons8.com/material-outlined/24/000000/ask-question.png"></button>
-								<button class='Gear add' type='button' data-toggle='tooltip' title='Add Gear'><img src="https://img.icons8.com/android/24/000000/plus.png"></button>
+								<button title='Add Gear' class='Gear add' type='button' data-toggle='tooltip'>
+									<img src="https://img.icons8.com/android/24/000000/plus.png"></button>
 							</legend>
 							<!-- Gear Help -->
 							<div id='askGear' class='collapse'>
@@ -831,14 +941,16 @@
 
 							<!-- Repeating Gear -->
 							<div class='repeatingGear'>
-								<input name='gearName_1' id='gearName_1' type='text' class='line inMove' placeholder='Item Name' data-toggle='tooltip' title='Item Name'>
-								<button class='Gear del' type='button' data-toggle='tooltip' title='Delete'>
+								<input id='gearName_1' name='gearName_1' title='Item Name' class='line inMove'
+									data-toggle='tooltip' type='text' placeholder='Item Name'>
+								<button title='Delete' class='Gear del' type='button' data-toggle='tooltip'>
 									<img src="https://img.icons8.com/material/24/000000/trash.png"></button>
-								<button class='Gear use' type='button' data-toggle='tooltip' title='Use'>&#127922;</button>
-								<button class='Gear hide' type='button'><img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
+								<button title='Use' class='Gear use' type='button' data-toggle='tooltip'>&#127922;</button>
+								<button title='Detail' class='Gear hide' type='button'>
+									<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								<!-- Gear Hide -->
 								<div id='gearEx_1' name='gearEX_1' class='hideBlock'>
-									<textarea name='gearDesc_1' id='gearDesc_1' rows='3' cols='40' placeholder='Effect'></textarea>
+									<textarea id='gearDesc_1' name='gearDesc_1' rows='3' cols='40' placeholder='Effect'></textarea>
 								</div>
 							</div>
 						</fieldset> <!-- End Gear -->
@@ -850,11 +962,11 @@
 					<fieldset>
 						<legend>Status</legend>
 
-						<!--Status--><fieldset class='fieldstack'>
+						<!--Condition--><fieldset class='fieldstack'>
 							<legend class='txsm'>Conditions
-								<button data-toggle='collapse' data-target='#askCon' type='button'>
+								<button type='button' data-toggle='collapse' data-target='#askCon'>
 									<img src="https://img.icons8.com/material-outlined/24/000000/ask-question.png"></button>
-								<button class='Condition add' type='button' data-toggle='tooltip' title='Add Condition'>
+								<button title='Add Condition' class='Condition add' type='button' data-toggle='tooltip'>
 									<img src="https://img.icons8.com/android/24/000000/plus.png"></button>
 							</legend>
 
@@ -864,7 +976,7 @@
 
 							<!-- Repeating Condition -->
 							<div class='repeatingCondition'>
-								<select id='conName_1' name='conName_1' data-toggle='tooltip' title='Condition'>
+								<select id='conName_1' name='conName_1' title='Condition' data-toggle='tooltip'>
 									<option value='burn'>Burn</option>
 									<option value='frz'>Frozen</option>
 									<option value='para'>Paralysis</option>
@@ -873,23 +985,25 @@
 									<option value='conf'>Confused</option>
 									<option value='fnch'>Flinched</option>
 								</select>
-								<input id='conDur_1' name='conDur_1' type='number' class='line inSml' placeholder='1' data-toggle='tooltip' title='Duration'>
-								<button class='Condition del' type='button' data-toggle='tooltip' title='Delete'>
+								<input id='conDur_1' name='conDur_1' title='Duration' class='line inSml'
+									type='number' data-toggle='tooltip' placeholder='1'>
+								<button title='Delete' class='Condition del' type='button' data-toggle='tooltip'>
 									<img src="https://img.icons8.com/material/24/000000/trash.png"></button>
-								<button class='conRoll' type='button' data-toggle='tooltip' title='Roll'>&#127922;</button>
-								<button class='Condition hide' type='button'><img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
+								<button title='Roll' class='conRoll' type='button' data-toggle='tooltip'>&#127922;</button>
+								<button title='Detail' class='Condition hide' type='button'>
+									<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								<!-- Condition Hide -->
 								<div id='conEx_1' name='conEX_1' class='hideBlock'>
-									<textarea name='conDesc_1' id='conDesc_1' rows='3' cols='40' placeholder='Effect'></textarea>
+									<textarea id='conDesc_1' name='conDesc_1' rows='3' cols='40' placeholder='Effect'></textarea>
 								</div>
 							</div>
 						</fieldset> <!-- End Condition -->
 
 						<!--Buffs--><fieldset class='fieldstack'>
 							<legend class='txsm'>Stat Change
-								<button data-toggle='collapse' data-target='#askBuff' type='button'>
+								<button title='Help' type='button' data-toggle='collapse' data-target='#askBuff'>
 									<img src="https://img.icons8.com/material-outlined/24/000000/ask-question.png"></button>
-								<button class='Buff add' type='button' data-toggle='tooltip' title='Add Stat Change'>
+								<button title='Add Stat Change' class='Buff add' type='button' data-toggle='tooltip'>
 									<img src="https://img.icons8.com/android/24/000000/plus.png"></button>
 							</legend>
 							<!-- Buff Question -->
@@ -899,14 +1013,16 @@
 
 							<!-- Repeating Buff -->
 							<div class='repeatingBuff'>
-								<input id='buffName_1' name='buffName_1' type='text' class='line inMove' placeholder='Source' data-toggle='tooltip' title='Effect Source'>
-								<button class='Buff del' type='button' data-toggle='tooltip' title='Delete'>
+								<input id='buffName_1' name='buffName_1' title='Effect Source' class='line inMove'
+									type='text' data-toggle='tooltip' placeholder='Source'>
+								<button title='Delete' class='Buff del' type='button' data-toggle='tooltip'>
 									<img src="https://img.icons8.com/material/24/000000/trash.png"></button>
-								<button class='buffRoll' type='button' data-toggle='tooltip' title='Roll'>&#127922;</button>
-								<button class='Buff hide' type='button'><img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
+								<button title='Roll' class='buffRoll' type='button' data-toggle='tooltip'>&#127922;</button>
+								<button title='Detail' class='Buff hide' type='button'>
+									<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								<!-- Buff Hide -->
 								<div id='buffEx_1' name='buffEX_1' class='hideBlock'>
-									<select id='buffStat_1' name='buffStat_1' data-toggle='tooltip' title='Stat'>
+									<select id='buffStat_1' name='buffStat_1' title='Stat' data-toggle='tooltip'>
 										<option value='hp'>Health</option>
 										<option value='ene'>Energy</option>
 										<option value='init'>Initiative</option>
@@ -915,8 +1031,10 @@
 										<option value='agi'>Agility</option>
 										<option value='spd'>Speed</option>
 									</select>
-									<input id='buffNum_1' name='buffNum_1' type='number' class='line inSml' data-toggle='tooltip' title='Value'>
-									<input id='buffDur_1' name='buffDur_1' type='number' class='line inSml' data-toggle='tooltip' title='Duration'>
+									<input id='buffNum_1' name='buffNum_1' title='Value' class='line inSml'
+										type='number' data-toggle='tooltip' value='0'>
+									<input id='buffDur_1' name='buffDur_1' title='Duration' class='line inSml'
+										type='number' data-toggle='tooltip' value='1'>
 								</div>
 							</div>
 						</fieldset> <!-- End Buffs -->

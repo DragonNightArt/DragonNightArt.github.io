@@ -1,7 +1,28 @@
+//Affinity
+	function update_type() {
+		/*
+		code should look something like:
+		if (type1 or type2 === 'neutral') {
+			typeC = '';}
+		if (type1 or type2 === 'fire') {
+			if (type1 or type2 === 'water') {
+				typeC = 'Abyss'};
+			etc...
+		};
+		
+		All combos are:
+			Fire+Decay=Frost   Fire+Spirit=Celestial   Fire+Air=Lightning   Fire+Earth=Magma   Fire+Water=Abyss
+			Water+Decay=Venom   Water+Spirit=Illusion   Water+Air=Weather   Water+Earth=Forest
+			Earth+Decay=Saboteur   Earth+Spirit=Metal   Earth+Air=Sand
+			Air+Decay=Gravity   Air+Spirit=Time
+			Spirit+Decay=Mind
+		*/
+	}
+
 //Health
 	function update_hpCalc() {
 		document.forms['sheet']['hpCurMax'].value = 
-			+document.forms['sheet']['hpPts'].value + +document.forms['sheet']['hpMod'].value;
+			5 + +document.forms['sheet']['hpPts'].value + +document.forms['sheet']['hpMod'].value;
 		document.getElementById('hpCur').max =
 			+document.forms['sheet']['hpCurMax'].value;
 		document.getElementById('hpPts').max =
@@ -11,7 +32,7 @@
 //Energy
 	function update_enCalc() {
 		document.forms['sheet']['enCurMax'].value = 
-			+document.forms['sheet']['enPts'].value + +document.forms['sheet']['enMod'].value;
+			2 * (+document.forms['sheet']['enPts'].value + +document.forms['sheet']['enMod'].value);
 		document.getElementById('enCur').max =
 			+document.forms['sheet']['enCurMax'].value;
 		document.getElementById('enPts').max =
