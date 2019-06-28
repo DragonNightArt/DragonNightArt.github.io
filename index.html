@@ -75,8 +75,8 @@
 					</div>
 
 
-					<!--Basic Info--><div>
-					<table><tr>
+					<div>
+					<!--Basic Info--><table><tr>
 						<td>Name</td><td>Gender</td><td>Size</td><td>Loyalty</td>
 					</tr><tr>
 						<td><input id='name' name='name' title='Name' class='inBig'
@@ -148,33 +148,33 @@
 							</div>
 						</fieldset></td>
 
-						<!--Energy--><td class='hpcol' valign='top'><fieldset class='fieldstack'>
+						<!--Energy--><td class='hpcol' valign='top'><fieldset class='fieldstack'  style='background-color:#ebfaeb;'>
 							<legend class='txsm'>Energy</legend>
 							<div class='input-group'>
-								<input id='enCur' name='enCur' title='PP' class='form-control'
+								<input id='enCur' name='enCur' title='PP' class='form-control' style='background-color:#c2f0c2;'
 									type='number' data-toggle='tooltip' value='2' max='2'>
-								<div class='input-group-append'><span class='input-group-text'>/</span></div>
-								<input id='enCurMax' name='enCurMax' title='Max PP' class='form-control'
+								<div class='input-group-append'><span class='input-group-text' style='background-color:#c2f0c2;'>/</span></div>
+								<input id='enCurMax' name='enCurMax' title='Max PP' class='form-control' style='background-color:#c2f0c2;'
 									type='number' data-toggle='tooltip' value='5' readonly>
-								<button title='Detail' class='input-group-append'
+								<button title='Detail' class='input-group-append' style='background-color:#c2f0c2;'
 									type='button' data-toggle='collapse' data-target='#exEn'>
 									<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 							</div>
 
 							<!-- Energy Hide --><div id='exEn' class='collapse'>
 								<div class='input-group'>
-									<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-									<input id='enPts' name='enPts' title='Energy Points' class='form-control'
+									<div class='input-group-prepend'><span class="input-group-text" style='background-color:#c2f0c2;'>Points</span></div>
+									<input id='enPts' name='enPts' title='Energy Points' class='form-control' style='background-color:#c2f0c2;'
 										type='number' data-toggle='tooltip' value='1' max='5' onchange='update_enCalc()'>
 								</div>
 								<div class='input-group'>
-									<div class='input-group-prepend'><span class="input-group-text">Max</span></div>
-									<input id='enPtsMax' name='enPtsMax' title='Points Maximum' class='form-control'
+									<div class='input-group-prepend'><span class="input-group-text" style='background-color:#c2f0c2;'>Max</span></div>
+									<input id='enPtsMax' name='enPtsMax' title='Points Maximum' class='form-control' style='background-color:#c2f0c2;'
 										type='number' data-toggle='tooltip' value='5' onchange='update_enCalc()'>
 								</div>
 								<div class='input-group'>
-									<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-									<input id='enMod' name='enMod' title='Bonus' class='form-control'
+									<div class='input-group-prepend'><span class="input-group-text" style='background-color:#c2f0c2;'>Bonus</span></div>
+									<input id='enMod' name='enMod' title='Bonus' class='form-control' style='background-color:#c2f0c2;'
 										type='number' data-toggle='tooltip' value='0' onchange='update_enCalc()'>
 								</div>
 							</div>
@@ -251,13 +251,14 @@
 
 					<table><tr>
 						<!--Attack--><td class='col-sm-1' valign='top'>
-							<fieldset class='fieldstack'>
+							<fieldset class='fieldstack' style='background-color:#ffe6e6;'>
 								<legend class='txsm'>Attack</legend>
 								<div class='input-group'>
-									<input id='atk' name='atk' title='Attack' class='form-control' type='number' value='1' readonly>
-									<button title='Roll' class='input-group-append'
+									<input id='atk' name='atk' title='Attack' class='form-control' style='background-color:#ffcccc;'
+										type='number' value='1' readonly>
+									<button title='Roll' class='input-group-append' style='background-color:#ffcccc;'
 										type='button' data-toggle='tooltip' onclick='roll_atk()'>&#127922;</button>
-									<button title='Detail' class='input-group-append'
+									<button title='Detail' class='input-group-append' style='background-color:#ffcccc;'
 										type='button' data-toggle='collapse' data-target='#exAtk'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
@@ -283,31 +284,32 @@
 						</td><!-- End Attack -->
 
 						<!--Defence--><td class='col-sm-1' valign='top'>
-							<fieldset class='fieldstack'>
+							<fieldset class='fieldstack' style='background-color:#fff2cc;'>
 								<legend class='txsm'>Defence</legend>
 								<div class='input-group'>
-									<input id='def' name='def' title='Defence' class='form-control' type='number' value='1' readonly>
-									<button title='Roll' class='input-group-append'
+									<input id='def' name='def' title='Defence' class='form-control' style='background-color:#ffe699;'
+										type='number' value='1' readonly>
+									<button title='Roll' class='input-group-append' style='background-color:#ffe699;'
 										type='button' data-toggle='tooltip' onclick='roll_def()'>&#127922;</button>
-									<button title='Detail' class='input-group-append'
+									<button title='Detail' class='input-group-append' style='background-color:#ffe699;'
 										type='button' data-toggle='collapse' data-target='#exDef'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 
 								<!-- Defence Hide --><div id='exDef' class='collapse'>
 									<div class='input-group'>
-										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='defPts' name='defPts' title='Points' class='form-control'
+										<div class='input-group-prepend'><span class="input-group-text" style='background-color:#ffe699;'>Points</span></div>
+										<input id='defPts' name='defPts' title='Points' class='form-control' style='background-color:#ffe699;'
 											type='number' value='1' max='5' onchange='update_def()'>
 									</div>
 									<div class='input-group'>
-										<div class='input-group-prepend'><span class="input-group-text">Max</span></div>
-										<input id='defPtsMax' name='defPtsMax' title='Max' class='form-control'
+										<div class='input-group-prepend'><span class="input-group-text" style='background-color:#ffe699;'>Max</span></div>
+										<input id='defPtsMax' name='defPtsMax' title='Max' class='form-control' style='background-color:#ffe699;'
 											type='number' value='5' onchange='update_def()'>
 									</div>
 									<div class='input-group'>
-										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='defMod' name='defMod' title='Bonus' class='form-control'
+										<div class='input-group-prepend'><span class="input-group-text" style='background-color:#ffe699;'>Bonus</span></div>
+										<input id='defMod' name='defMod' title='Bonus' class='form-control' style='background-color:#ffe699;'
 											type='number' value='0' onchange='update_def()'>
 									</div>
 								</div>
@@ -315,31 +317,32 @@
 						</td><!-- End Defence -->
 
 						<!--Agility--><td class='col-sm-1' valign='top'>
-							<fieldset class='fieldstack'>
+							<fieldset class='fieldstack' style='background-color:#f0e6ff;'>
 								<legend class='txsm'>Agility</legend>
 								<div class='input-group'>
-									<input id='agi' name='agi' title='Agility' class='form-control' type='number' value='1' readonly>
-									<button title='Roll' class='input-group-append'
+									<input id='agi' name='agi' title='Agility' class='form-control' style='background-color:#e0ccff;'
+										type='number' value='1' readonly>
+									<button title='Roll' class='input-group-append' style='background-color:#e0ccff;'
 										type='button' data-toggle='tooltip' onclick='roll_agi()'>&#127922;</button>
-									<button title='Detail' class='input-group-append'
+									<button title='Detail' class='input-group-append' style='background-color:#e0ccff;'
 										type='button' data-toggle='collapse' data-target='#exAgi'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 
 								<!-- Agility Hide --><div id='exAgi' class='collapse'>
 									<div class='input-group'>
-										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='agiPts' name='agiPts' title='Points' class='form-control'
+										<div class='input-group-prepend'><span class="input-group-text" style='background-color:#e0ccff;'>Points</span></div>
+										<input id='agiPts' name='agiPts' title='Points' class='form-control' style='background-color:#e0ccff;'
 											type='number' value='1' max='5' onchange='update_agi()'>
 									</div>
 									<div class='input-group'>
-										<div class='input-group-prepend'><span class="input-group-text">Max</span></div>
-										<input id='agiPtsMax' name='agiPtsMax' title='Max' class='form-control'
+										<div class='input-group-prepend'><span class="input-group-text" style='background-color:#e0ccff;'>Max</span></div>
+										<input id='agiPtsMax' name='agiPtsMax' title='Max' class='form-control' style='background-color:#e0ccff;'
 											type='number' value='5' onchange='update_agi()'>
 									</div>
 									<div class='input-group'>
-										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='agiMod' name='agiMod' title='Bonus' class='form-control'
+										<div class='input-group-prepend'><span class="input-group-text" style='background-color:#e0ccff;'>Bonus</span></div>
+										<input id='agiMod' name='agiMod' title='Bonus' class='form-control' style='background-color:#e0ccff;'
 											type='number' value='0' onchange='update_agi()'>
 									</div>
 								</div>
@@ -350,10 +353,11 @@
 							<fieldset class='fieldstack'>
 								<legend class='txsm'>Speed</legend>
 								<div class='input-group'>
-									<input id='spd' name='spd' title='Speed' class='form-control' type='number' value='1' readonly>
-									<button title='Roll' class='input-group-append'
+									<input id='spd' name='spd' title='Speed' class='form-control'
+										type='number' value='1' readonly>
+									<button title='Roll' class='input-group-append' style='background-color:#ffe699;'
 										type='button' data-toggle='tooltip' onclick='roll_spd()'>&#127922;</button>
-									<button title='Detail' class='input-group-append'
+									<button title='Detail' class='input-group-append' style='background-color:#ffe699;'
 										type='button' data-toggle='collapse' data-target='#exSpd'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
@@ -634,127 +638,128 @@
 						</td>
 
 						<!-- Social --><td class='col-sm-1' valign='top'>
-							<fieldset class='fieldstack'>
+							<fieldset class='fieldstack' style='background-color:#e6e6ff;'>
 								<legend class='txsm'>Social Skills
-								<button title='Detail' style='float:right;' 
+								<button title='Detail' style='float:right; background-color:#ccccff;' 
 									type='button' data-toggle='collapse' data-target='#exSocial'>
 									<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</legend>
 
 								<div class='collapse' id='exSocial'>
 									<div class='input-group'>
-										<input id='soci' name='soci' title='Points' class='form-control'
+										<input id='soci' name='soci' title='Points' class='form-control' style='background-color:#ccccff;'
 											type='number' data-toggle='tooltip' value='0' max='5'>
-										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input title='Max' class='form-control'
+										<div class='input-group-append'><span class="input-group-text" style='background-color:#ccccff;'>/</span></div>
+										<input title='Max' class='form-control' style='background-color:#ccccff;'
 											type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
-										<div class='input-group-append'><span class="input-group-text">Bonus</span></div>
-										<input id='sociMod' name='sociMod' title='Bonus' class='form-control'
+										<div class='input-group-append'><span class="input-group-text" style='background-color:#ccccff;'>Bonus</span></div>
+										<input id='sociMod' name='sociMod' title='Bonus' class='form-control' style='background-color:#ccccff;'
 											type='number' data-toggle='tooltip' value='0' max='5'>
 									</div>
 								</div>
 
 								<!-- Command --><div class='input-group'>
-									<div class='input-group-prepend'><span class='input-group-text'>Command</span></div>
-									<input id='commSkl' name='commSkl' title='Total' class='form-control'
+									<div class='input-group-prepend'><span class='input-group-text' style='background-color:#ccccff;'>Command</span></div>
+									<input id='commSkl' name='commSkl' title='Total' class='form-control' style='background-color:#ccccff;'
 										type='number' data-toggle='tooltip' value='1' readonly>
-									<button title='Roll Command' class='input-group-append'
+									<button title='Roll Command' class='input-group-append' style='background-color:#ccccff;'
 										type='button' data-toggle='tooltip' onclick='roll_comm()'>&#127922;</button>
-									<button title='Detail' class='input-group-append'
+									<button title='Detail' class='input-group-append' style='background-color:#ccccff;'
 										type='button' data-toggle='collapse' data-target='#exComm'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Command Hide --><div id='exComm' class='collapse'>
 									<div class='input-group'>
-										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='commPts' name='commPts' title='Points' class='form-control'
+										<div class='input-group-prepend'><span class="input-group-text" style='background-color:#ccccff;'>Points</span></div>
+										<input id='commPts' name='commPts' title='Points' class='form-control' style='background-color:#ccccff;'
 											type='number' data-toggle='tooltip' value='0' max='5' onchange='update_comm()'>
-										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input title='Max' class='form-control'
+										<div class='input-group-append'><span class="input-group-text" style='background-color:#ccccff;'>/</span></div>
+										<input title='Max' class='form-control' style='background-color:#ccccff;'
 											type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
-										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='commMod' name='commMod' title='Bonus' class='form-control'
+										<div class='input-group-prepend'><span class="input-group-text" style='background-color:#ccccff;'>Bonus</span></div>
+										<input id='commMod' name='commMod' title='Bonus' class='form-control' style='background-color:#ccccff;'
 											type='number' data-toggle='tooltip' value='0' onchange='update_comm()'>
 									</div>
 								</div><!-- End Command -->
 
 								<!-- Deception --><div class='input-group'>
-									<div class='input-group-prepend'><span class='input-group-text'>Deception</span></div>
-									<input id='deceSkl' name='deceSkl' title='Total' class='form-control'
+									<div class='input-group-prepend'><span class='input-group-text' style='background-color:#ccccff;'>Deception</span></div>
+									<input id='deceSkl' name='deceSkl' title='Total' class='form-control' style='background-color:#ccccff;'
 										type='number' data-toggle='tooltip' value='1' readonly>
-									<button title='Roll Deception' class='input-group-append'
+									<button title='Roll Deception' class='input-group-append' style='background-color:#ccccff;'
 										type='button' data-toggle='tooltip' onclick='roll_dece()'>&#127922;</button>
-									<button title='Detail' class='input-group-append'
+									<button title='Detail' class='input-group-append' style='background-color:#ccccff;'
 										type='button' data-toggle='collapse' data-target='#exDece'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Deception Hide --><div id='exDece' class='collapse'>
 									<div class='input-group'>
-										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='decePts' name='decePts' title='Points' class='form-control'
+										<div class='input-group-prepend'><span class="input-group-text" style='background-color:#ccccff;'>Points</span></div>
+										<input id='decePts' name='decePts' title='Points' class='form-control' style='background-color:#ccccff;'
 											type='number' data-toggle='tooltip' value='0' max='5' onchange='update_dece()'>
-										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input title='Max' class='form-control'
+										<div class='input-group-append'><span class="input-group-text" style='background-color:#ccccff;'>/</span></div>
+										<input title='Max' class='form-control' style='background-color:#ccccff;'
 											type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
-										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='deceMod' name='deceMod' title='Bonus' class='form-control'
+										<div class='input-group-prepend'><span class="input-group-text" style='background-color:#ccccff;'>Bonus</span></div>
+										<input id='deceMod' name='deceMod' title='Bonus' class='form-control' style='background-color:#ccccff;'
 											type='number' data-toggle='tooltip' value='0' onchange='update_dece()'>
 									</div>
 								</div><!-- End Deception -->
 
 								<!-- Intuition --><div class='input-group'>
-									<div class='input-group-prepend'><span class='input-group-text'>Intuition</span></div>
-									<input id='intuSkl' name='intuSkl' title='Total' class='form-control'
+									<div class='input-group-prepend'><span class='input-group-text' style='background-color:#ccccff;'>Intuition</span></div>
+									<input id='intuSkl' name='intuSkl' title='Total' class='form-control' style='background-color:#ccccff;'
 										type='number' data-toggle='tooltip' value='1' readonly>
-									<button title='Roll Intuition' class='input-group-append'
+									<button title='Roll Intuition' class='input-group-append' style='background-color:#ccccff;'
 										type='button' data-toggle='tooltip' onclick='roll_intu()'>&#127922;</button>
-									<button title='Detail' class='input-group-append'
+									<button title='Detail' class='input-group-append' style='background-color:#ccccff;'
 										type='button' data-toggle='collapse' data-target='#exIntu'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Intuition Hide --><div id='exIntu' class='collapse'>
 									<div class='input-group'>
-										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='intuPts' name='intuPts' title='Points' class='form-control'
+										<div class='input-group-prepend'><span class="input-group-text" style='background-color:#ccccff;'>Points</span></div>
+										<input id='intuPts' name='intuPts' title='Points' class='form-control' style='background-color:#ccccff;'
 											type='number' data-toggle='tooltip' value='0' max='5' onchange='update_intu()'>
-										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input title='Max' class='form-control'
+										<div class='input-group-append'><span class="input-group-text" style='background-color:#ccccff;'>/</span></div>
+										<input title='Max' class='form-control' style='background-color:#ccccff;'
 											type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
-										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='intuMod' name='intuMod' title='Bonus' class='form-control'
+										<div class='input-group-prepend'><span class="input-group-text" style='background-color:#ccccff;'>Bonus</span></div>
+										<input id='intuMod' name='intuMod' title='Bonus' class='form-control' style='background-color:#ccccff;'
 											type='number' data-toggle='tooltip' value='0' onchange='update_intu()'>
 									</div>
 								</div><!-- End Intuition -->
 
 								<!-- Persuasion --><div class='input-group'>
-									<div class='input-group-prepend'><span class='input-group-text'>Persuasion</span></div>
-									<input id='persSkl' name='persSkl' title='Total' class='form-control'
+									<div class='input-group-prepend'><span class='input-group-text' style='background-color:#ccccff;'>Persuasion</span></div>
+									<input id='persSkl' name='persSkl' title='Total' class='form-control' style='background-color:#ccccff;'
 										type='number' data-toggle='tooltip' value='1' readonly>
-									<button title='Roll Persuasion' class='input-group-append'
+									<button title='Roll Persuasion' class='input-group-append' style='background-color:#ccccff;'
 										type='button' data-toggle='tooltip' onclick='roll_pers()'>&#127922;</button>
-									<button title='Detail' class='input-group-append'
+									<button title='Detail' class='input-group-append' style='background-color:#ccccff;'
 										type='button' data-toggle='collapse' data-target='#exPers'>
 										<img src="https://img.icons8.com/material-sharp/24/000000/gear.png"></button>
 								</div>
 								<!-- Persuasion Hide --><div id='exPers' class='collapse'>
 									<div class='input-group'>
-										<div class='input-group-prepend'><span class="input-group-text">Points</span></div>
-										<input id='persPts' name='persPts' title='Points' class='form-control'
+										<div class='input-group-prepend'><span class="input-group-text" style='background-color:#ccccff;'>Points</span></div>
+										<input id='persPts' name='persPts' title='Points' class='form-control' style='background-color:#ccccff;'
 											type='number' data-toggle='tooltip' value='0' onchange='update_pers()' max='5'>
-										<div class='input-group-append'><span class="input-group-text">/</span></div>
-										<input readonly type='number' class='form-control' data-toggle='tooltip' title='Max' value='5'>
+										<div class='input-group-append'><span class="input-group-text" style='background-color:#ccccff;'>/</span></div>
+										<input title='Max' class='form-control' style='background-color:#ccccff;'
+											type='number' data-toggle='tooltip' value='5' readonly>
 									</div>
 									<div class='input-group'>
-										<div class='input-group-prepend'><span class="input-group-text">Bonus</span></div>
-										<input id='persMod' name='persMod' title='Bonus' class='form-control'
+										<div class='input-group-prepend'><span class="input-group-text" style='background-color:#ccccff;'>Bonus</span></div>
+										<input id='persMod' name='persMod' title='Bonus' class='form-control' style='background-color:#ccccff;'
 											type='number' data-toggle='tooltip' value='0' onchange='update_pers()'>
 									</div>
 								</div><!-- End Persuasion -->
