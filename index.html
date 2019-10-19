@@ -5,6 +5,7 @@
 	<!-- mobile compatibility -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Bootstrap -->
+	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -36,26 +37,14 @@
 	.navbrand {
 		}
 		
-	a:link {
-	  color: white;
-	  background-color: transparent;
-	  text-decoration: none;
-	}
-
-	a:visited {
+	a:link, a:visited, a:active {
 	  color: white;
 	  background-color: transparent;
 	  text-decoration: none;
 	}
 
 	a:hover {
-	  color: white;
-	  background-color: transparent;
-	  text-decoration: none;
-	}
-
-	a:active {
-	  color: white;
+	  color: black;
 	  background-color: transparent;
 	  text-decoration: none;
 	}
@@ -83,12 +72,12 @@
 				<a class="navbar-brand" href="#">DragonNightArt</a>
 			</div>-->
 			<ul class="nav navbar-nav">
-				<li><a href="#">DragonNightArt</a></li>
-				<li><a href="./art.html">Art Showcase</a></li>
-				<li><a href="./crafts.html">Craft Showcase</a></li>
-				<li><a href="./commissions.html">Commissions</a></li>
+				<li>DragonNightArt</li>
+				<li><a href="./art">Art Showcase</a></li>
+				<li><a href="./crafts">Craft Showcase</a></li>
+				<li><a href="./commissions">Commissions</a></li>
 				<!--<li><a href="#">Shop</a></li>-->
-				<li><a href="./contacts.html">Contacts</a></li>
+				<li><a href="./contact">Contacts</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -100,8 +89,14 @@
 	
 		<!-- Home Gallery -->
 		<div class="row">
-			<img class="img-fluid" src="art_thumb/18sml_Deisvhal.png" class="rounded" alt="Deisvhal - 2018">
-			<img class="img-fluid" src="art_thumb/18sml_Angora_God.png" class="rounded" alt="Angora God - 2018">
+			<a data-fancybox="gallery" href="pic/19_Verthica.png" data-caption="Verthica - 2019"><img src="pic_thumb/19sml_Verthica.png"></a>
+			<a data-fancybox="gallery" href="pic/16_Watching_Space.png" data-caption="Watching Space Go By - 2016"><img src="pic_thumb/16sml_Watching_Space.png"></a>
+			<a data-fancybox="gallery" href="pic/18_Angora_god.png" data-caption="Angora God - 2018"><img src="pic_thumb/18sml_Angora_God.png"></a>
+			<a data-fancybox="gallery" href="pic/18_Deisvhal.png" data-caption="Deisvhal - 2018"><img src="pic_thumb/18sml_Deisvhal.png"></a>
+			<a data-fancybox="gallery" href="pic/18_Ventus_Bane.png" data-caption="Ventus Bane - 2018"><img src="pic_thumb/19sml_Ventus_Bane.png"></a>
+			<a data-fancybox="gallery" href="pic/19_Tezza.png" data-caption="Tezza - 2019"><img src="pic_thumb/19sml_Tezza.png"></a>
+			<a data-fancybox="gallery" href="pic/14_Demi_Armor.png" data-caption="Demi's Armor"><img src="pic_thumb/14sml_Demi_Armor.png"></a>
+			<a data-fancybox="gallery" href="pic/19_Bird_Garden.jpg" data-caption="Cardinal's Garden - 2019"><img src="pic_thumb/19sml_Bird_Garden.jpg"></a>
 		</div>
 		
 		<!-- Home About -->
@@ -123,6 +118,7 @@
 	</div>
 	<div class="col-lg-2"></div>
 </div>
+</center>
 
 <script>
 
