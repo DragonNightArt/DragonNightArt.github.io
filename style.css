@@ -1,66 +1,102 @@
-button {
-	display:inline-block;
-	float:right;
-	}
-button img {
-	height:1.1em;
-	width:1.1em;
-	margin:auto;
-	}
-legend {
-	bottom-margin:5px;
-	}
+body{
+	color:White;
+	background-color:#19181b;
+	text-align: center;
+}
 
-input.inTny {
-	width:35px;
-	}
-input.inSml {
-	width:50px;
-	}
-input.inMed {
-	width:100px;
-	}
-input.inBig {
-	width:200px;
-	}
-input.inMove {
-	width:140px;
-	}
-input.line {
-	display:inline-block;
-	}
+card {
+	background-color:#3e3c44;
+}
 
-table, tr, td {
-	padding:3px;
-	}
+.navbar {
+	color:white;
+	background-color:#3e3c44;
+}
 
-.hideBlock {
-  display: none;
-  overflow: hidden;
-  }
+.navbar-nav {
+	float:none;
+	margin:0 auto;
+	display: block;
+	text-align: center;
+}
 
-.txsm {
-	font-size:11pt;
-	font-weight:bold;
-	}
-.fieldnorm {
+.navbar-nav > li {
 	display: inline-block;
-	padding: 3px;
-	border: 1px solid black;
-	}
-.fieldstack {
-	padding: 3px;
-	border: 1px solid black;
-	margin:0px;
-	}
-.fieldstack div {
-	margin-bottom: 5px;
-	}
-.statcol {
-	padding:3px;
-	width:210px;
-	
-.hpcol {
-	padding:3px;
-	width:200px;
-	}
+	float:none;
+}
+
+.nav-link {
+	color:white;
+}
+
+.link-home:hover {
+	color:black;
+	background-color:lightgray;
+}
+
+.link-art:hover {
+	color:white;
+	background-color:purple;
+}
+
+.link-craft:hover {
+	color:white;
+	background-color:blue;
+}
+
+.link-comm:hover {
+	color:white;
+	background-color:green;
+}
+
+.link-shop:hover {
+	color:black;
+	background-color:yellow;
+}
+
+.link-contact:hover {
+	color:white;
+	background-color:red;
+}
+
+.rainbow {
+    background: linear-gradient(
+		0.75turn, red, orange, yellow, green, blue, purple
+	);
+}
+
+.jumbotron{
+	margin-top:50px;
+}
+
+.header-rainbow {
+    background: linear-gradient(
+		0.75turn, #660000, #663300, #666600, #006600, #000066, #660066
+	);
+	text-align:center;
+}
+
+.header-art {
+	background: #660066;
+	text-align:center;
+}
+
+.header-craft {
+	background: #000066;
+	text-align:center;
+}
+
+.header-commissions {
+	background: #006600;
+	text-align:center;
+}
+
+.header-store {
+	background: #666600;
+	text-align:center;
+}
+
+.header-contact {
+	background: #660000;
+	text-align:center;
+}

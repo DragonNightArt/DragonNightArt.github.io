@@ -4,104 +4,57 @@
 	<meta charset="utf-8">
 	<!-- mobile compatibility -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	 <!-- Bootstrap 4 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+	<!-- Fancybox -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-<style>
 	
-	body{
-		color:White;
-		background-color:#19181b;}
+	<!-- My CSS -->
+	<link rel="stylesheet" href="./style.css">
 
-	.header {
-		background-color:#3e3c44;
-		text-align:center;}
-	
-	.navbar-me {
-		background-color:#3e3c44;}
-
-
-	.navbar-nav {
-		float:none;
-		margin:0 auto;
-		display: block;
-		text-align: center;}
-
-	.navbar-nav > li {
-		display: inline-block;
-		float:none;}
-	
-	.navbrand {
-		}
-		
-	a:link, a:visited, a:active {
-	  color: white;
-	  background-color: transparent;
-	  text-decoration: none;
-	}
-
-	a:hover {
-	  color: black;
-	  background-color: transparent;
-	  text-decoration: none;
-	}
-	
-</style>
 </head>
 <body>
 
-<!-- Header -->
-	<div class="jumbotron header"> <h1>Contacts</h1> </div>
-	
-<!-- Nav Header --
-	Home (Logo)
-	Art Gallery (Purple)
-	Craft Gallery (Blue)
-	Commissions (Green)
-	Store (Yellow)
-	Contact (Red)
--->
-
 <!-- Nav Float -->
-	<nav class="navbar navbar-me navbar-fixed-top">
+	<nav class="navbar fixed-top navbar-expand-sm">
 		<div class="container-fluid">
-			<!--<div class="navbar-">
-				<a class="navbar-brand" href="#">DragonNightArt</a>
-			</div>-->
-			<ul class="nav navbar-nav">
-				<li><a href="./">DragonNightArt</a></li>
-				<li><a href="./art.html">Art Showcase</a></li>
-				<li><a href="./crafts.html">Craft Showcase</a></li>
-				<li><a href="./commissions.html">Commissions</a></li>
-				<!--<li><a href="#">Shop</a></li>-->
-				<li>Contact</li>
+			<ul class="navbar-nav">
+				<li class="nav-item active"><a class="nav-link link-home" href="./">DragonNightArt</a></li>
+				<li class="nav-item"><a class="nav-link link-art" href="./art.html">Art Showcase</a></li>
+				<li class="nav-item"><a class="nav-link link-craft" href="./crafts.html">Craft Showcase</a></li>
+				<li class="nav-item"><a class="nav-link link-comm" href="./commissions.html">Commissions</a></li>
+				<!--<li class="nav-item"><a class="nav-link link-shop" href="./shop.html">Shop</a></li>-->
+				<li class="nav-item"><a class="nav-link link-contact" href="./contact.html">Contact</a></li>
 			</ul>
 		</div>
 	</nav>
 
-<center>
-<div class="row">
-	<div class="col-lg-2"></div>
-	<div class="col-lg-8">
+<!-- Header -->
+	<div class="jumbotron header-contact"> <h1>Contact</h1> </div>
+
+<div class="container-fluid">
+	<div class="row justify-content-center">
+		<div class="col-lg-10">
 	
-	Contacts
-	
+			<p>Sorry for the mess! This is still under construction.<br>
+			
+			<a href="https://www.facebook.com/DragonNightArt/">Facebook</a><br>
+			<a href="https://www.twitch.tv/dragonnightart">Twitch</a><br>
+			
+			I teach a beginner needle-felting class every few months.<br>
+			At the moment I teach only at <a href="http://www.bfranklincrafts.com/HomeMonroe.html">Ben Franklin Crafts</a> in Monroe, WA. I hope to expand to a few other local places in the near future!<br>
+			You can reserve a spot in my next class <a href="https://store.bfranklincrafts.com/MONROE_Store_Classes_s/1863.htm">here.</a>
+			
+			</p>
+		</div>
 	</div>
-	<div class="col-lg-2"></div>
 </div>
 
-</center>
-<!-- Text -->
-
-<!-- Footer -->
-
-<script>
-
-
-
-</script>
 </body>
 </html>

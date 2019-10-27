@@ -4,184 +4,149 @@
 	<meta charset="utf-8">
 	<!-- mobile compatibility -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	 <!-- Bootstrap 4 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+	<!-- Fancybox -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-<style>
 	
-	body{
-		color:White;
-		background-color:#19181b;}
+	<!-- My CSS -->
+	<link rel="stylesheet" href="./style.css">
 
-	.header {
-		background-color:#3e3c44;
-		text-align:center;}
-	
-	.navbar-me {
-		background-color:#3e3c44;}
-
-
-	.navbar-nav {
-		float:none;
-		margin:0 auto;
-		display: block;
-		text-align: center;}
-
-	.navbar-nav > li {
-		display: inline-block;
-		float:none;}
-	
-	.navbrand {
-		}
-	
-	.inline {
-		display:inline-block;
-	}
-	
-	a:link, a:visited, a:active {
-	  color: white;
-	  background-color: transparent;
-	  text-decoration: none;
-	}
-
-	a:hover {
-	  color: black;
-	  background-color: transparent;
-	  text-decoration: none;
-	}
-	
-</style>
 </head>
 <body>
 
-<!-- Header -->
-	<div class="jumbotron header"> <h1>Commissions</h1> </div>
-	
-<!-- Nav Header --
-	Home (Logo)
-	Art Gallery (Purple)
-	Craft Gallery (Blue)
-	Commissions (Green)
-	Store (Yellow)
-	Contact (Red)
--->
-
 <!-- Nav Float -->
-	<nav class="navbar navbar-me navbar-fixed-top">
+	<nav class="navbar fixed-top navbar-expand-sm">
 		<div class="container-fluid">
-			<!--<div class="navbar-">
-				<a class="navbar-brand" href="#">DragonNightArt</a>
-			</div>-->
-			<ul class="nav navbar-nav">
-				<li><a href="./">DragonNightArt</a></li>
-				<li><a href="./art.html">Art Showcase</a></li>
-				<li><a href="./crafts.html">Craft Showcase</a></li>
-				<li>Commissions</li>
-				<!--<li><a href="#">Shop</a></li>-->
-				<!--<li><a href="./contact.html">Contact</a></li>-->
+			<ul class="navbar-nav">
+				<li class="nav-item active"><a class="nav-link link-home" href="./">DragonNightArt</a></li>
+				<li class="nav-item"><a class="nav-link link-art" href="./art.html">Art Showcase</a></li>
+				<li class="nav-item"><a class="nav-link link-craft" href="./crafts.html">Craft Showcase</a></li>
+				<li class="nav-item"><a class="nav-link link-comm" href="./commissions.html">Commissions</a></li>
+				<!--<li class="nav-item"><a class="nav-link link-shop" href="./shop.html">Shop</a></li>-->
+				<li class="nav-item"><a class="nav-link link-contact" href="./contact.html">Contact</a></li>
 			</ul>
 		</div>
 	</nav>
 
-<center>
-<div class="row">
-	<div class="col-lg-2"></div>
-	<div class="col-lg-8">
+<!-- Header -->
+	<div class="jumbotron header-commissions"> <h1>Commissions</h1> </div>
+
+<div class="container-fluid">
+	<div class="row justify-content-center">
+		<div class="col-lg-10">
+			
+			<div class="row justify-content-center"><h1>Available Styles</h1></div>
+				<div class="row justify-content-center">
+					<h3>Sketch</h3>
+				</div><div class="row justify-content-center">
+					<p>$15 - $25</p>
+				</div>
+				<div class="row justify-content-center">
+					<img class="img-fluid" src="pic_thumb/19sml_Tayne_Kisa.png" class="rounded" alt="Sketch">
+					<img class="img-fluid" src="pic_thumb/19sml_Verthica.png" class="rounded" alt="Sketch">
+				</div>
+				
+				<div class="row justify-content-center">
+					<h3>Refined</h3>
+				</div><div class="row justify-content-center">
+					<p>$30 - $100<br>
+					Choice:<br>
+					Lined - Lineless<br>
+					Minimal Shading - Block Shading - Watercolor Shading</p>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col inline"><img class="img-fluid" src="pic_thumb/15sml_Au_Lion.png" alt="Lined + Minimal Shading">
+						<p>Lined + Minimal Shading</p></div>
+					<div class="col inline"><img class="img-fluid" src="pic_thumb/16sml_Christmas.png" alt="Lined + Block Shading">
+						<p>Lined + Block Shading</p></div>
+					<div class="col inline"><img class="img-fluid" src="pic_thumb/16sml_Watching_Space.png" alt="Lined + Watercolor Shading">
+						<p>Lined + Watercolor Shading</p></div>
+					<div class="col inline"><img class="img-fluid" src="pic_thumb/19sml_Tezza.png" alt="Lineless + Minimal Shading">
+						<p>Lineless + Minimal Shading</p></div>
+					<div class="col inline"><img class="img-fluid" src="pic_thumb/18sml_Deisvhal.png" alt="Lineless + Block Shading">
+						<p>Lineless + Block Shading</p></div>
+					<div class="col inline"><img class="img-fluid" src="pic_thumb/19sml_Forthean.png" alt="Lineless + Watercolor Shading">
+						<p>Lineless + Watercolor Shading</p></div>
+				</div>
+				
+				<div class="row justify-content-center">
+					<h3>Stencil</h3>
+				</div><div class="row justify-content-center">
+					<p>$30 - $100<br>
+					Choice:<br>
+					Light Style - Heavy Style - Block Style<br>
+					Single Color - Mixed Flat Colors - Full Shading</p>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col inline"><img class="img-fluid" src="pic_thumb/14sml_Lined_Wolf.png" alt="Light Style - Full Shading">
+						<p>Light Style + Full Shading</p></div>
+					<div class="col inline"><img class="img-fluid" src="pic_thumb/18sml_Angora_God.png" alt="Heavy Style + Mixed Flat Colors">
+						<p>Heavy Style + Mixed Flat Colors</p></div>
+					<div class="col inline"><img class="img-fluid" src="pic_thumb/14sml_Sparkle_Horse.png" alt="Heavy Style + Full Shading">
+						<p>Heavy Style + Full Shading</p></div>
+					<div class="col inline"><img class="img-fluid" src="pic_thumb/17sml_Jaguar.png" alt="Block Style + Single Color">
+						<p>Block Style + Single Color</p></div>
+					<div class="col inline"><img class="img-fluid" src="pic_thumb/14sml_Fire_Bird.png" alt="Block Style + Mixed Flat Colors">
+						<p>Block Style + Mixed Flat Colors</p></div>
+				</div>
+				
+			<div class="row justify-content-center"><h1>Request a Commission</h1></div>
+			<div class="row justify-content-center">
+				<h3>How do I request a commission?</h3>
+			</div><div class="row justify-content-center">
+				<p>Send an Email. <a href="mailto: dragonnightart@gmail.com">Click here for the Email link</a><br>
+				Please include these details with your request:<br>
+				- What you intend to do with the work. (This helps me know what size to work at.) <br> 
+				- What style you want.<br>
+				- As many details as possible about the character(s) you want to be drawn. If the artwork is of someone or something specific, please include a reference image.<br>
+				- If you want the image to be worked on my Twitch stream, if you want it to stay private, or if you have no preference either way.</p>
+				
+			</div><div class="row justify-content-center">
+				<h3>Thumbnails and In-Progress Previews</h3>
+			</div><div class="row justify-content-center">
+				<p>Shortly after receiving a request, I will return the email with a thumbnail and price estimate.<br>
+				A thumbnail is a small, quick sketch. It is meant to work out the shapes and general feel of the piece.<br>
+				When you have confirmed the thumbnail design, I will start work proper.<br>
+				</p>
+				
+			</div><div class="row justify-content-center">
+				<h3>Price</h3>
+			</div><div class="row justify-content-center">
+				<p>I charge $10 + ($10 per hour) USD for my work. I count time per half-hour.<br>
+				The final price sometimes varies from the estimate by $5 or $10. The final price will not exceed the estimate by more than 30%.<br>
+				For Commissions over $30, I'll request up to 50% in advance.<br>
+				</p>
+				
+			</div><div class="row justify-content-center">
+				<h3>Time</h3>
+			</div><div class="row justify-content-center">
+				<p>Images are normally completed within 2 weeks.</p>
+				
+			</div><div class="row justify-content-center">
+				<h3>Final</h3>
+			</div><div class="row justify-content-center">
+				<p>As soon as payment has been received I'll send you all the project files, including the full resolution .png image.<br>
+				</p>
+				
+			</div><div class="row justify-content-center">
+				<h3>Restrictions</h3>
+			</div><div class="row justify-content-center">
+				<p>I will not draw copyrighted characters or sexual content.<br>
+				I will draw images containing moderate gore or romantic scenes.<br>
+				I may refuse to draw certain items of modern technology (such as guns or vehicles), as they take a long time to draw.
+				If I do agree to draw modern technology, it will always include a significant increase in the price estimate.
+				</p>
+			</div>
 	
-	<div class="row"><h1>Available Styles</h1></div>
-		<div class="row">
-			<h3>Sketch</h3>
-			<p>$15 - $25</p>
 		</div>
-		<div class="row">
-			<img class="img-fluid" src="pic_thumb/19sml_Tayne_Kisa.png" class="rounded" alt="Sketch">
-			<img class="img-fluid" src="pic_thumb/19sml_Verthica.png" class="rounded" alt="Sketch">
-		</div>
-		
-		<div class="row">
-			<h3>Refined</h3>
-			<p>$30 - $100<br>
-			Choice:<br>
-			Lined - Lineless<br>
-			Minimal Shading - Block Shading - Watercolor Shading</p>
-		</div>
-		<div class="row">
-			<div class="col inline"><img class="img-fluid" src="pic_thumb/15sml_Au_Lion.png" alt="Lined + Minimal Shading">
-				<p>Lined + Minimal Shading</p></div>
-			<div class="col inline"><img class="img-fluid" src="pic_thumb/16sml_Christmas.png" alt="Lined + Block Shading">
-				<p>Lined + Block Shading</p></div>
-			<div class="col inline"><img class="img-fluid" src="pic_thumb/16sml_Watching_Space.png" alt="Lined + Watercolor Shading">
-				<p>Lined + Watercolor Shading</p></div>
-			<div class="col inline"><img class="img-fluid" src="pic_thumb/19sml_Tezza.png" alt="Lineless + Minimal Shading">
-				<p>Lineless + Minimal Shading</p></div>
-			<div class="col inline"><img class="img-fluid" src="pic_thumb/18sml_Deisvhal.png" alt="Lineless + Block Shading">
-				<p>Lineless + Block Shading</p></div>
-			<div class="col inline"><img class="img-fluid" src="pic_thumb/19sml_Forthean.png" alt="Lineless + Watercolor Shading">
-				<p>Lineless + Watercolor Shading</p></div>
-		</div>
-		
-		<div class="row">
-			<h3>Stencil</h3>
-			<p>$30 - $100<br>
-			Choice:<br>
-			Light Style - Heavy Style - Block Style<br>
-			Single Color - Mixed Flat Colors - Full Shading</p>
-		</div>
-		<div class="row">
-			<div class="col inline"><img class="img-fluid" src="pic_thumb/14sml_Lined_Wolf.png" alt="Light Style - Full Shading">
-				<p>Light Style + Full Shading</p></div>
-			<div class="col inline"><img class="img-fluid" src="pic_thumb/18sml_Angora_God.png" alt="Heavy Style + Mixed Flat Colors">
-				<p>Heavy Style + Mixed Flat Colors</p></div>
-			<div class="col inline"><img class="img-fluid" src="pic_thumb/14sml_Sparkle_Horse.png" alt="Heavy Style + Full Shading">
-				<p>Heavy Style + Full Shading</p></div>
-			<div class="col inline"><img class="img-fluid" src="pic_thumb/17sml_Jaguar.png" alt="Block Style + Single Color">
-				<p>Block Style + Single Color</p></div>
-			<div class="col inline"><img class="img-fluid" src="pic_thumb/14sml_Fire_Bird.png" alt="Block Style + Mixed Flat Colors">
-				<p>Block Style + Mixed Flat Colors</p></div>
-		</div>
-		
-	<div class="row"><h1>Request a Commission</h1></div>
-	<div class="row">
-		<h3>How do I request a commission?</h3>
-		<p>Send an Email. <a href="mailto: dragonnightart@gmail.com">Click here for the Email link</a><br>
-		Please include these details with your request:<br>
-		- What you intend to do with the work. (This helps me know what size to work at.) <br> 
-		- What style you want.<br>
-		- As many details as possible about the character(s) you want to be drawn. If the artwork is of someone or something specific, please include a reference image.<br>
-		- If you want the image to be worked on my Twitch stream, if you want it to stay private, or if you have no preference either way.</p>
-		
-		<h3>Thumbnails and In-Progress Previews</h3>
-		<p>Shortly after receiving a request, I will return the email with a thumbnail and price estimate.<br>
-		A thumbnail is a small, quick sketch. It is meant to work out the shapes and general feel of the piece.<br>
-		When you have confirmed the thumbnail design, I will start work proper.<br>
-		</p>
-		
-		<h3>Price</h3>
-		<p>I charge $10 + ($10 per hour) USD for my work. I count time per half-hour.<br>
-		The final price sometimes varies from the estimate by $5 or $10. The final price will not exceed the estimate by more than 30%.<br>
-		For Commissions over $30, I'll request up to 50% in advance.<br>
-		</p>
-		
-		<h3>Time</h3>
-		<p>Images are normally completed within 2 weeks.</p>
-		
-		<h3>Final</h3>
-		<p>As soon as payment has been received I'll send you all the project files, including the full resolution .png image.<br>
-		</p>
-		
-		<h3>Restrictions</h3>
-		<p>I will not draw copyrighted characters or sexual content.<br>
-		I will draw images containing moderate gore or romantic scenes.<br>
-		I may refuse to draw certain items of modern technology (such as guns or vehicles), as they take a long time to draw.
-		If I do agree to draw modern technology, it will always include a significant increase in the price estimate.
-		</p>
 	</div>
-	
-	</div>
-	<div class="col-lg-2"></div>
 </div>
 
 </center>
